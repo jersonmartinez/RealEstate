@@ -79,3 +79,10 @@ function form_suscriptions_side(){
       }
     });
 }
+
+$("#exampleInputPassword2").keypress(function(e) {
+  if(e.which == 13) {
+    // Acciones a realizar, por ej: enviar formulario.
+    $('#StartSession').click();
+   }
+});

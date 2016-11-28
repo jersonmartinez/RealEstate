@@ -28,7 +28,7 @@
                                     <div class="card-body">
                                       La licencia MIT (MIT)<br><br>
 
-                                      Derechos de autor (c) [<?php echo date("Y"); ?>] [Diseño y Desarrollo de aplicaciones Web - Jerson M.] (Side Master)<br><br>
+                                      Derechos de autor (c) [<?php echo date("Y"); ?>] [Diseño y Desarrollo de aplicaciones Web - Jerson M.] (Side Master).<br><br>
 
                                       Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y archivos de documentación asociados (el "Software"), para utilizar el Software sin restricciones, incluyendo, sin limitación, los derechos para usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software, y para permitir que las personas a quienes se proporcione el Software para hacerlo, sujeto a las siguientes condiciones:<br><br>
 
