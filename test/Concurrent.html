@@ -1,0 +1,19 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo 2 con concurrencia</title>
+	<script src="../js/Concurrent.Thread.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		function proceso (parametro_texto) {
+			while (true) {
+				console.log(parametro_texto);
+			}
+		}
+		Concurrent.Thread.create(proceso, "HOLA MUNDO");
+	</script>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	<button>Este botón SÍ se va a mostrar</button>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+div.title_topLeft {
+	position: absolute;
+}
+
+div.title_topLeft p {
+	color: #fff;
+	font-family: 'Lobster';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	margin-left: 30%;
+	margin-top: 5px;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: 0em;
+	word-spacing: 0em;
+	line-height: 1.4;
+}
+
+
+.btn-danger {
+	margin-top: 2px;
+}
+
+.fa-globe {
+	margin-right: 10px;
+}
+
+.imagen_login img {
+	margin-left: 30%;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 4px solid #AFB4BD;
+}
+
+#loginpop div div div p {
+	color: #000;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+.ok, .fail {
+	z-index: 1000000;
+	transition-duration: .4s;
+	transform: linear;
+	padding: 10px;
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	border-radius: 12px;
+	border-bottom: 7px solid rgba(0,0,0,0.4);
+	display: none;
+}
+
+.ok {
+	background-color: rgba(58,231,27,.5);
+}
+
+.fail {
+	background-color: rgba(248,4,29,.5);
+}
+
+div.ok p {
+	color: #fff;
+	font-style: cursive;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+div.fail p {
+	color: #fff;
+	font-style: cursive;
+	font-size: 20px;
+	font-family: 'Lobster';
+}
+
+@media screen and (max-width: 200px) {
+  div.fail p {
+    background-color: red;
+    color: blue;
+  }
+}
