@@ -199,7 +199,8 @@ function OnItemClickTrAgent(value){
 	    type: "POST",
 	    data: $("#ShowDataAgentByEmail").serialize(),
 	    success: function(data){
-   			$(".ContentDataAgent").html(data);    		
+   			$(".ContentDataAgent").html(data); 
+   			$("#MyAgentNames").html("Información del agente " + $("#show_names").val().split(" ")[0] + " " + $("#show_lastnames").val().split(" ")[0]);   		
 	    }
   	});
 

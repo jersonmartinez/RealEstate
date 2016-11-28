@@ -17,7 +17,7 @@ if (@$_SESSION['login'] != 1) {
 
 <?php include ("build/menu_left.php");?>
 
-<?php include ("build/view_articles.php");?>
+<?php include ("build/view_users.php");?>
 </div>
 
 <?php include ("build/footer.php");?>
@@ -26,7 +26,7 @@ if (@$_SESSION['login'] != 1) {
 <script type="text/javascript">
             setTimeout(function(){
                 $("navbar-nav .active").removeClass("active");
-                $(".option_article__item").addClass("active");
+                $(".two__item").addClass("active");
             }, 100);
         </script>
     </body>
