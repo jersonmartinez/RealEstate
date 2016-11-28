@@ -18,7 +18,7 @@
 
                 <div class="container-fluid">
                     <div class="side-body">
-                        <div class="page-title" style="background-color: rgba(0,0,0,0.5); color: #fff;">
+                        <div class="page-title" style="text-shadow: 1px 2px 3px #000; color: #fff;">
                             <span class="title">Licencia</span>
                         </div>
 
@@ -35,6 +35,19 @@
                                       El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.<br><br>
 
                                       EL SOFTWARE SE PROPORCIONA "TAL CUAL", sin garantía de ningún tipo, expresa o implícita, incluyendo pero no limitado a las garantías de comerciabilidad, aptitud para un propósito PARTICULAR Y NO. EN NINGÚN CASO LOS AUTORES O COPYRIGHT TITULARES RESPONSABLE POR CUALQUIER RECLAMO, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                      <b>TECNOLOGÍA IMPLEMENTADA EN EL PROYECTO</b><br><br>
+
+                                      De lado del cliente: <b>HTML(5)</b> | <b>CSS(3)</b> | <b>JavaScript (JS)</b>, entre los Framework's o Librerías se hace notar <b>Bootstrap</b> | <b>JQuery</b>. <br/>De lado del servidor: <b>PHP (5.6 y superior)</b>, librerías derivadas de este mismo lenguaje.<br><br>
 
                                     </div>
                                 </div>
