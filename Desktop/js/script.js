@@ -200,7 +200,9 @@ function OnItemClickTrAgent(value){
 	    data: $("#ShowDataAgentByEmail").serialize(),
 	    success: function(data){
    			$(".ContentDataAgent").html(data); 
-   			$("#MyAgentNames").html("Información del agente " + $("#show_names").val().split(" ")[0] + " " + $("#show_lastnames").val().split(" ")[0]);   		
+   			var nameAgent = $("#show_names").val().split(" ")[0];
+   			var lastnameAgent = $("#show_lastnames").val().split(" ")[0];
+   			$("#MyAgentNames").html("Información del agente " + nameAgent.charAt(0).toUpperCase() + nameAgent.slice(1) + " " + lastnameAgent.charAt(0).toUpperCase() + lastnameAgent.slice(1));   		
 	    }
   	});
 
