@@ -932,3 +932,66 @@ $src_img_ext = $Conexion->query("SELECT * FROM img_perfil WHERE username='".$_SE
         </div>
     </div>
 </div>
+
+<!-- Se muestra esta modal si ha ocurrido un error al cargar los datos en la DB. -->
+<input type="hidden" class="OMAboutUsError" data-toggle="modal" data-target="#OMAboutUsError"  />
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="OMAboutUsError" tabindex="1" role="dialog" aria-labelledby="MOMAboutUsError" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="MOMAboutUsError">Acerca de nosotros</h4>
+            </div>
+            <div class="modal-body modal_suscriptions_char">
+                <p>Ha ocurrido un problema inesperado, por favor, vuelva a intentarlo!.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Se muestra la modal que afirma que los datos se han agregado con éxito. -->
+<input type="hidden" class="OpenModalContactUs" data-toggle="modal" data-target="#OpenModalContactUs"  />
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="OpenModalContactUs" tabindex="1" role="dialog" aria-labelledby="OMContactUs" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="OMContactUs">Contáctanos</h4>
+            </div>
+            <div class="modal-body modal_suscriptions_char">
+                <p>¡Genial!, los datos se han agregdado con éxito.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ha ocurrido un error al intentar agregar los datos. -->
+<input type="hidden" class="OpenModalContactUsError" data-toggle="modal" data-target="#OpenModalContactUsError"  />
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="OpenModalContactUsError" tabindex="1" role="dialog" aria-labelledby="OMContactUsError" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="OMContactUsError">Contáctanos</h4>
+            </div>
+            <div class="modal-body modal_suscriptions_char">
+                <p>Up's. Ha ocurrido un problema al intentar agregar los datos, por favor, vuelva a intentarlo.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

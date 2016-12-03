@@ -824,6 +824,8 @@ function AddNowAboutUs(){
 	    success: function(data){
 	    	if (data == "OK"){
 	    		$(".OpenModalAboutUs").click();
+	    	} else {
+	    		$(".OMAboutUsError").click();
 	    	}
 	    }
   	});
@@ -836,7 +838,9 @@ function LoadFormAboutContact(){
 	    data: $("#FormAddAboutContact").serialize(),
 	    success: function(data){
 	    	if (data == "OK"){
-	    		$(".OpenModalAboutUs").click();
+	    		$(".OpenModalContactUs").click();
+	    	} else {
+	    		$(".OpenModalContactUsError").click();
 	    	}
 	    }
   	});
