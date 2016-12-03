@@ -75,6 +75,9 @@ function form_suscriptions_side(){
         if (data == "OK"){
           $("#email_suscription_").val("");
           $(".OpenModalSuscriptions").click();
+        } else if (data == "Exists"){
+          $("#email_suscription_").val("");
+          $(".OMSuscriptionError").click();
         }
       }
     });
