@@ -8,12 +8,18 @@
 	$cabeceras = 'From: ' .$IAm. "\r\n" .
     'Reply-To: '.$IAm;
 
-    if ($destino != ""){
-		if (mail($destino, "Belly Real Estate", $mensaje, $cabeceras)){
-			if ($Conexion->query("INSERT INTO suscriptions (id, email, date_log, date_log_unix, viewed) VALUES ('','".$destino."','".date('Y-n-j')."','".time()."','No');")){
-				echo "OK";
+    $FoundSuscriptor = $Conexion->query("SELECT * FROM suscriptions WHERE email='".$destino."';");
+
+    if ($FoundSuscriptor->num_rows > 0){
+    	echo "Exists";
+    } else {
+	    if ($destino != ""){
+			if (mail($destino, "Belly Real Estate", $mensaje, $cabeceras)){
+				if ($Conexion->query("INSERT INTO suscriptions (id, email, date_log, date_log_unix, viewed) VALUES ('','".$destino."','".date('Y-n-j')."','".time()."','No');")){
+					echo "OK";
+				}
 			}
-		}
+	    }
     }
 
 ?>
