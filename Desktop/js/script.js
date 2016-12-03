@@ -828,3 +828,16 @@ function AddNowAboutUs(){
 	    }
   	});
 }
+
+function LoadFormAboutContact(){
+	$.ajax({
+	    url: "build/UpdateAboutContact.php",
+	    type: "POST",
+	    data: $("#FormAddAboutContact").serialize(),
+	    success: function(data){
+	    	if (data == "OK"){
+	    		$(".OpenModalAboutUs").click();
+	    	}
+	    }
+  	});
+}

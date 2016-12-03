@@ -103,6 +103,17 @@
 		'about_us' => "CREATE TABLE about_us (
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 			content MEDIUMTEXT
+		)", 
+		'contact_us' => "CREATE TABLE contact_us (
+			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+			whoami VARCHAR(500), 
+			location VARCHAR(500), 
+			email VARCHAR(255), 
+			phone VARCHAR(50), 
+			fb VARCHAR(500), 
+			tt VARCHAR(500), 
+			gp VARCHAR(500), 
+			li VARCHAR(500)
 		)"
 	);
 
