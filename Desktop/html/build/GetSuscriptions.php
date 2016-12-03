@@ -7,7 +7,7 @@
             <ul class="list-group">
 
             <?php
-            	$wh = $Conexion->query("SELECT * FROM suscriptions ORDER BY id DESC;");
+            	$wh = $Conexion->query("SELECT DISTINCT email, viewed FROM suscriptions ORDER BY id DESC;");
             	while ($RU = $wh->fetch_array(MYSQLI_ASSOC)){
 
             		if ($RU['viewed'] == "No"){
