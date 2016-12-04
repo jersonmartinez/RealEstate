@@ -2,16 +2,15 @@
 <html lang="es">
 
   <head>
-    <?php include ("php/head.php"); ?>
-  </head>
+<?php include ("php/head.php");?>
+</head>
 
   <body>
-    <?php
-      include ("php/header.php");
-    ?>
-
-    <div class="inside-banner">
-      <div class="container"> 
+<?php
+include ("php/header.php");
+?>
+<div class="inside-banner">
+      <div class="container">
         <span class="pull-right"><a href="#">Home</a> / Buy</span>
         <h2>Buy</h2>
       </div>
@@ -61,7 +60,7 @@
           </div>
           <div class="col-lg-8 col-sm-7">
             <h5><a href="property-detail.html">Integer sed porta quam</a></h5>
-            <p class="price">$300,000</p> 
+            <p class="price">$300,000</p>
           </div>
         </div>
 
@@ -99,7 +98,7 @@
             <!-- Item 2 -->
             <div class="item">
               <img src="images/properties/2.jpg" class="properties" alt="properties" />
-             
+
             </div>
             <!-- #Item 2 -->
 
@@ -112,7 +111,7 @@
             <!-- Item 4 -->
             <div class="item ">
               <img src="images/properties/3.jpg" class="properties" alt="properties" />
-              
+
             </div>
             <!-- # Item 4 -->
           </div>
@@ -120,7 +119,7 @@
           <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
       </div>
-      
+
       <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span> Properties Detail</h4>
       <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
       <p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service</p>
@@ -136,7 +135,7 @@
     <div class="property-info">
     <p class="price">$ 200,000,000</p>
       <p class="area"><span class="glyphicon glyphicon-map-marker"></span> 344 Villa, Syndey, Australia</p>
-      
+
       <div class="profile">
       <span class="glyphicon glyphicon-user"></span> Agent Details
       <p>John Parker<br>009 229 2929</p>
@@ -158,7 +157,7 @@
                     <textarea rows="6" class="form-control" placeholder="Whats on your mind?"></textarea>
           <button type="submit" class="btn btn-primary" name="Submit">Send Message</button>
           </form>
-     </div>         
+     </div>
     </div>
       </div>
     </div>
@@ -168,7 +167,7 @@
     </div>
 
     <div class="footer">
-      <?php include ("php/footer.php"); ?>
+<?php include ("php/footer.php");?>
     </div>
 
   </body>
