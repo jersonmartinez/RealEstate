@@ -1,7 +1,3 @@
-<div class="properties-listing spacer"> <a href="buysalerent" class="pull-right viewall">Ver todas las propiedades</a>
-  <h2>Propiedades Destacadas</h2>
-</div>
-
 <div class="spacer">
   <div class="row">
     <div class="col-lg-6 col-sm-9 recent-view">
