@@ -8,11 +8,31 @@
   <body>
 <?php
 include ("php/header.php");
+
+if (isset($_GET['id_art']) && !empty($_GET['id_art'])) {
+	$ThisId = $_GET['id_art'];
+} else {
+
+	header("Location: ./");
+}
+
+$GetInfoArticle = $Conexion->query("SELECT * FROM article WHERE id_art='".$ThisId."';");
+
+if ($GetInfoArticle->num_rows == 0) {
+	include ("php/notfound.php");
+	exit();
+}
+
+$GIA = $GetInfoArticle->fetch_array(MYSQLI_ASSOC);
 ?>
 <div class="inside-banner">
       <div class="container">
-        <span class="pull-right"><a href="#">Home</a> / Buy</span>
-        <h2>Buy</h2>
+        <span class="pull-right">
+          <a href="./">Principal</a>
+           /
+<?php echo " ".$GIA['business_type'];?>
+        </span>
+        <h2><?php echo " ".$GIA['business_type'];?></h2>
       </div>
     </div>
 
@@ -63,7 +83,6 @@ include ("php/header.php");
             <p class="price">$300,000</p>
           </div>
         </div>
-
       </div>
 
       <div class="advertisement">
@@ -75,88 +94,122 @@ include ("php/header.php");
 
     <div class="col-lg-9 col-sm-8 ">
 
-    <h2>2 room and 1 kitchen apartment</h2>
+    <h2><?php echo " ".$GIA['title'];?></h2>
     <div class="row">
       <div class="col-lg-8">
       <div class="property-images">
         <!-- Slider Starts -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
-          <ol class="carousel-indicators hidden-xs">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-          </ol>
-          <div class="carousel-inner">
-            <!-- Item 1 -->
-            <div class="item active">
-              <img src="images/properties/4.jpg" class="properties" alt="properties" />
-            </div>
-            <!-- #Item 1 -->
 
-            <!-- Item 2 -->
-            <div class="item">
-              <img src="images/properties/2.jpg" class="properties" alt="properties" />
+<?php
+$GetImgArticle = $Conexion->query("SELECT * FROM publish_img WHERE id_art='".$GIA['id_art']."';");
+if ($GetImgArticle->num_rows == 0) {
+	echo "NO HAY IMÁGENES DISPONIBLES";
+} else {
+	?>
+	<ol class="carousel-indicators hidden-xs">
+	<?php
 
-            </div>
-            <!-- #Item 2 -->
+	$IteradorIA = $GetImgArticle->num_rows;
+	for ($GIAC = 0; $GIAC < $IteradorIA; $GIAC++) {
+		if ($GIAC == 0) {
+			?>
+			                      <li data-target="#myCarousel" data-slide-to="<?php echo $GIAC;?>" class="active"></li>
+			<?php
+		} else {
+			?>
+			                      <li data-target="#myCarousel" data-slide-to="<?php echo $GIAC;?>" class=""></li>
+			<?php
+		}
+	}
+	?>
+	</ol>
 
-            <!-- Item 3 -->
-             <div class="item">
-              <img src="images/properties/1.jpg" class="properties" alt="properties" />
-            </div>
-            <!-- #Item 3 -->
+	                <div class="carousel-inner">
+	<?php
+	$GIAC = 0;
+	while ($GIAR = $GetImgArticle->fetch_array(MYSQLI_ASSOC)) {
+		if ($GIAC == 0) {
+			?>
+			                          <div class="item active">
+			                            <img src="<?php echo "Desktop/".$GIAR['folder'].$GIAR['src'];?>" class="properties" alt="properties" />
+			                          </div>
+			<?php
+		} else {
+			?>
+			                          <div class="item">
+			                            <img src="<?php echo "Desktop/".$GIAR['folder'].$GIAR['src'];?>" class="properties" alt="properties" />
+			                          </div>
+			<?php
+		}
+		$GIAC++;
+	}
+	?>
+	</div>
+	<?php
+}
+?>
 
-            <!-- Item 4 -->
-            <div class="item ">
-              <img src="images/properties/3.jpg" class="properties" alt="properties" />
-
-            </div>
-            <!-- # Item 4 -->
-          </div>
           <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
       </div>
 
-      <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span> Properties Detail</h4>
-      <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
-      <p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service</p>
-
-      </div>
-      <div><h4><span class="glyphicon glyphicon-map-marker"></span> Location</h4>
-    <div class="well"><iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pulchowk,+Patan,+Central+Region,+Nepal&amp;aq=0&amp;oq=pulch&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Pulchowk,+Patan+Dhoka,+Patan,+Bagmati,+Central+Region,+Nepal&amp;ll=27.678236,85.316853&amp;spn=0.001347,0.002642&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>
+      <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span>Detalles de la propiedad / <?php echo $GIA['property_type'];?></h4>
+<?php
+echo $GIA['content_es'];
+?>
+</div>
+      <div>
+<?php include ("php/map_location.php");?>
       </div>
 
       </div>
       <div class="col-lg-4">
       <div class="col-lg-12  col-sm-6">
     <div class="property-info">
-    <p class="price">$ 200,000,000</p>
-      <p class="area"><span class="glyphicon glyphicon-map-marker"></span> 344 Villa, Syndey, Australia</p>
+    <p class="price">$<?php echo $GIA['price'];?></p>
+      <p class="area"><span class="glyphicon glyphicon-map-marker"></span>Localidad <p><?php echo $GIA['department'].", ".$GIA['city']." : ".$GIA['local_address'];?></p>
 
       <div class="profile">
-      <span class="glyphicon glyphicon-user"></span> Agent Details
-      <p>John Parker<br>009 229 2929</p>
+<?php
+$AgentDetails = $Conexion->query("SELECT * FROM agents WHERE id_agent='".$GIA['id_agent']."';")->fetch_array(MYSQLI_ASSOC);
+?>
+<span class="glyphicon glyphicon-user"></span> Detalles del agente
+        <p>
+<?php echo explode(" ", $AgentDetails['names'])[0]." ".explode(" ", $AgentDetails['lastnames'])[0];?>
+</p>
+<?php
+if ($AgentDetails['phone_claro'] != "") {
+	echo "<p>Claro: ".$AgentDetails['phone_claro']."</p>";
+}
+
+if ($AgentDetails['phone_movistar'] != "") {
+	echo "<p>Movistar: ".$AgentDetails['phone_movistar']."</p>";
+}
+?>
       </div>
     </div>
 
-        <h6><span class="glyphicon glyphicon-home"></span> Availabilty</h6>
+        <h6><span class="glyphicon glyphicon-home"></span>Disponibilidad</h6>
         <div class="listing-detail">
-        <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <span data-toggle="tooltip" data-placement="bottom" data-original-title="Dormitorios"><?php echo $GIA['bed_room'];?></span>
+        <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $GIA['living_room'];?></span>
+        <span data-toggle="tooltip" data-placement="bottom" data-original-title="Estacionamientos"><?php echo $GIA['parking'];?></span>
+        <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $GIA['kitchen'];?></span> </div>
 
     </div>
     <div class="col-lg-12 col-sm-6 ">
     <div class="enquiry">
-      <h6><span class="glyphicon glyphicon-envelope"></span> Post Enquiry</h6>
+      <h6><span class="glyphicon glyphicon-envelope"></span>Consultar</h6>
       <form role="form">
-                    <input type="text" class="form-control" placeholder="Full Name"/>
-                    <input type="text" class="form-control" placeholder="you@yourdomain.com"/>
-                    <input type="text" class="form-control" placeholder="your number"/>
-                    <textarea rows="6" class="form-control" placeholder="Whats on your mind?"></textarea>
-          <button type="submit" class="btn btn-primary" name="Submit">Send Message</button>
-          </form>
+        <input type="text" class="form-control" placeholder="Nombre completo"/>
+        <input type="text" class="form-control" placeholder="Correo electrónico"/>
+        <input type="text" class="form-control" placeholder="Número de teléfono"/>
+        <textarea rows="6" class="form-control" placeholder="¿Qué tienes en mente?"></textarea>
+        <button type="submit" class="btn btn-primary" name="Submit">Enviar Mensaje</button>
+      </form>
      </div>
     </div>
       </div>
