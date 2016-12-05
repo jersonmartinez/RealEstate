@@ -169,7 +169,12 @@
       <div class="col-lg-4">
       <div class="col-lg-12  col-sm-6">
     <div class="property-info">
-    <p class="price">$<?php echo $GIA['price']; ?></p>
+    <p class="price">
+      $
+      <?php
+        echo $GIA['price'];
+      ?>
+    </p>
       <p class="area"><span class="glyphicon glyphicon-map-marker"></span>Localidad <p><?php echo $GIA['department'].", ".$GIA['city']." : ".$GIA['local_address']; ?></p>
       
       <div class="profile">
