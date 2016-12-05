@@ -14,9 +14,9 @@
       else 
         header("Location: ./");
 
-      $GetInfoArticle = $Conexion->query("SELECT * FROM article WHERE id_art='".$ThisId."';");
+      @$GetInfoArticle = $Conexion->query("SELECT * FROM article WHERE id_art='".$ThisId."';");
 
-      if ($GetInfoArticle->num_rows == 0){ 
+      if (@$GetInfoArticle->num_rows == 0){ 
         include ("php/notfound.php");
         exit();
       }

@@ -9,8 +9,6 @@
         <li class="col-lg-12 col-sm-12 col-xs-3"><a href="contact">Contacto</a></li>
       </ul>
     </div>
-    
-
 
     <div class="col-lg-3 col-sm-3">
       <h4>Hoja informativa</h4>
