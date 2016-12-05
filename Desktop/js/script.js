@@ -3,7 +3,7 @@ window.onload = function(){
 }
 
 function GoMainNow(){
-	window.open(window.location.protocol + "//" + window.location.host, '_blank');
+	window.open(window.location.protocol + "//" + window.location.host + "/RealEstate", '_blank');
 }
 
 function SubirFotos(){	

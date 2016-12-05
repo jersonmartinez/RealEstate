@@ -16,7 +16,7 @@
                 <i class="fa fa-times icon"></i>
             </button>
             <li>
-                <a href="" onclick="javascript: GoMainNow();" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-home fa-2x" style="margin-right: 10px"></i>Página principal</a>
+                <a href="#" onclick="javascript: GoMainNow();" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-home fa-2x" style="margin-right: 10px"></i>Página principal</a>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o fa-2x"></i></a>
