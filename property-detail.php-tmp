@@ -43,8 +43,32 @@ $GIA = $GetInfoArticle->fetch_array(MYSQLI_ASSOC);
     <div class="col-lg-3 col-sm-4 hidden-xs">
 
       <div class="hot-properties hidden-xs">
-        <h4>Hot Properties</h4>
-        <div class="row">
+        <h4>Propiedades calientes</h4>
+
+<?php
+$HotProperties = $Conexion->query("SELECT * FROM article;");
+//$GetImgArticleHP = $Conexion->query("SELECT * FROM publish_img WHERE id_art='".$GIA['id_art']."';")->fetch_array(MYSQLI_ASSOC);
+
+while ($HP = $HotProperties->fetch_array(MYSQLI_ASSOC)) {
+	$GIHP = $Conexion->query("SELECT * FROM publish_img WHERE id_art='".$HP['id_art']."' ORDER BY id_img ASC LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
+
+	?>
+	              <div class="row">
+	                <div class="col-lg-4 col-sm-5">
+	                  <img src="<?php echo 'Desktop/'.$GIHP['folder'].$GIHP['src'];?>" class="img-responsive img-circle" alt="properties"/>
+	                </div>
+	                <div class="col-lg-8 col-sm-7">
+	                  <h5><a href="property-detail.php?id_art=<?php echo $HP['id_art'];?>"><?php echo $HP['title'];
+	?></a></h5>
+	                  <p class="price">$<?php echo $HP['price'];?></p>
+	                </div>
+	              </div>
+	<?php
+}
+?>
+      </div>
+      </div>
+       <!--  <div class="row">
           <div class="col-lg-4 col-sm-5">
             <img src="images/properties/4.jpg" class="img-responsive img-circle" alt="properties"/>
           </div>
@@ -83,14 +107,13 @@ $GIA = $GetInfoArticle->fetch_array(MYSQLI_ASSOC);
             <p class="price">$300,000</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="advertisement">
+      <!-- <div class="advertisement">
         <h4>Advertisements</h4>
         <img src="images/advertisements.jpg" class="img-responsive" alt="advertisement">
-      </div>
-
-    </div>
+      </div> -->
+      <!-- </div> -->
 
     <div class="col-lg-9 col-sm-8 ">
 
