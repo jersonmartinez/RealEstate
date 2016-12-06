@@ -58,8 +58,9 @@
 			date_log DATETIME NOT NULL DEFAULT NOW(),
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL, 
-
-			FOREIGN KEY (id_agent) REFERENCES agents(id_agent),
+			
+			#Hay que prestar atención a esta línea.
+			FOREIGN KEY (id_agent) REFERENCES agents(id_agent) ON UPDATE CASCADE ON DELETE CASCADE,
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)", 
 		'publish_img' => "CREATE TABLE publish_img (
