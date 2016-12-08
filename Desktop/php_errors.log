@@ -1,0 +1,108 @@
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:22:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 135
+[06-Dec-2016 04:22:30 UTC] PHP Stack trace:
+[06-Dec-2016 04:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:22:30 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:135
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:55 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 122
+[06-Dec-2016 04:23:55 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:55 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:122
+[06-Dec-2016 04:23:56 UTC] PHP Warning:  mysqli::query(): Couldn't fetch TheCodeBrain in /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php on line 135
+[06-Dec-2016 04:23:56 UTC] PHP Stack trace:
+[06-Dec-2016 04:23:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:0
+[06-Dec-2016 04:23:56 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/RealEstate/Desktop/connect_server/create_db.php:135
+[06-Dec-2016 04:40:18 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/ubuntu/workspace/RealEstate/Desktop/html/build/tape.php on line 70
+[06-Dec-2016 04:40:18 UTC] PHP Stack trace:
+[06-Dec-2016 04:40:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:0
+[06-Dec-2016 04:40:18 UTC] PHP   2. include() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:17
