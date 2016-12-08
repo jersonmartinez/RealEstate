@@ -1,6 +1,6 @@
 <?php
 	include ("connect_server.php");
-	
+
 	$tables = array('admin_info' => "CREATE TABLE admin_info (
 			username VARCHAR(50) NOT NULL, 
 			date_log DATE NOT NULL, 
@@ -24,14 +24,15 @@
 			description VARCHAR(1000), 
 			folder VARCHAR(300),
 			src VARCHAR(500),
-			date_log DATETIME NOT NULL DEFAULT NOW(),
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL,
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)",
 		'article' => "CREATE TABLE article (
 			id_art INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
-			
+
 			title VARCHAR(500) NOT NULL, 
 			content_es MEDIUMTEXT NOT NULL, 
 			content_en MEDIUMTEXT,
@@ -54,19 +55,21 @@
 
 			longitude VARCHAR(50), 
 			latitude VARCHAR(50), 
-
-			date_log DATETIME NOT NULL DEFAULT NOW(),
+	
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL, 
 
-			FOREIGN KEY (id_agent) REFERENCES agents(id_agent),
+			FOREIGN KEY (id_agent) REFERENCES agents(id_agent) ON UPDATE CASCADE ON DELETE CASCADE,
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)", 
 		'publish_img' => "CREATE TABLE publish_img (
 			id_img INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 			folder VARCHAR(300) NOT NULL,
 			src VARCHAR(300) UNIQUE NOT NULL,
-			date_log DATETIME NOT NULL DEFAULT NOW(),
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			id_art INT UNSIGNED NOT NULL,
 			FOREIGN KEY (id_art) REFERENCES article(id_art) ON UPDATE CASCADE ON DELETE CASCADE
@@ -75,13 +78,15 @@
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
 			folder VARCHAR(300) NOT NULL, 
 			src VARCHAR(300) UNIQUE NOT NULL, 
-			created_at DATETIME NOT NULL DEFAULT NOW()
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			created_at DATETIME NOT NULL
 		)", 
 		'img_perfil' => "CREATE TABLE img_perfil (
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
 			folder VARCHAR(300) NOT NULL, 
 			src VARCHAR(300) UNIQUE NOT NULL, 
-			created_at DATETIME NOT NULL DEFAULT NOW(), 
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			created_at DATETIME NOT NULL, 
 			username VARCHAR(50) NOT NULL, 
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)",
