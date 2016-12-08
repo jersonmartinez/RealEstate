@@ -61,6 +61,7 @@
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL, 
 
+			#Hay que prestar atención a esta línea.
 			FOREIGN KEY (id_agent) REFERENCES agents(id_agent) ON UPDATE CASCADE ON DELETE CASCADE,
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)", 
