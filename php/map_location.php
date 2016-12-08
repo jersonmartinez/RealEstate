@@ -92,4 +92,4 @@
           
         </div>
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false&callback=LoadMap"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false&callback=LoadMap"></script>
