@@ -190,34 +190,34 @@
       </div>
       <div class="col-lg-4">
       <div class="col-lg-12  col-sm-6">
-    <div class="property-info">
-    <p class="price">
-      $
-      <?php
-        echo $GIA['price'];
-      ?>
-    </p>
-      <p class="area"><span class="glyphicon glyphicon-map-marker"></span>Localidad <p><?php echo $GIA['department'].", ".$GIA['city']." : ".$GIA['local_address']; ?></p>
-      
-      <div class="profile">
-        <?php
-          $AgentDetails = $Conexion->query("SELECT * FROM agents WHERE id_agent='".$GIA['id_agent']."';")->fetch_array(MYSQLI_ASSOC);
-        ?>
-        <span class="glyphicon glyphicon-user"></span> Detalles del agente
-        <p>
-          <?php echo explode(" ", $AgentDetails['names'])[0]." ".explode(" ", $AgentDetails['lastnames'])[0]; ?>
-        </p>
-          <?php 
-            if ($AgentDetails['phone_claro'] != ""){
-              echo "<p>Claro: ".$AgentDetails['phone_claro']."</p>";
-            }
+        <div class="property-info">
+          <p class="price">
+            $
+            <?php
+              echo $GIA['price'];
+            ?>
+          </p>
+          <p class="area"><span class="glyphicon glyphicon-map-marker"></span>Localidad <p><?php echo $GIA['department'].", ".$GIA['city']." : ".$GIA['local_address']; ?></p>
+          
+          <div class="profile">
+            <?php
+              $AgentDetails = $Conexion->query("SELECT * FROM agents WHERE id_agent='".$GIA['id_agent']."';")->fetch_array(MYSQLI_ASSOC);
+            ?>
+            <span class="glyphicon glyphicon-user"></span> Detalles del agente
+            <p>
+              <?php echo explode(" ", $AgentDetails['names'])[0]." ".explode(" ", $AgentDetails['lastnames'])[0]; ?>
+            </p>
+              <?php 
+                if ($AgentDetails['phone_claro'] != ""){
+                  echo "<p>Claro: ".$AgentDetails['phone_claro']."</p>";
+                }
 
-            if ($AgentDetails['phone_movistar'] != ""){
-              echo "<p>Movistar: ".$AgentDetails['phone_movistar']."</p>";
-            }
-          ?>
-      </div>
-    </div>
+                if ($AgentDetails['phone_movistar'] != ""){
+                  echo "<p>Movistar: ".$AgentDetails['phone_movistar']."</p>";
+                }
+              ?>
+          </div>
+        </div>
 
         <h6><span class="glyphicon glyphicon-home"></span>Disponibilidad</h6>
         <div class="listing-detail">
@@ -225,19 +225,21 @@
         <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $GIA['living_room']; ?></span>
         <span data-toggle="tooltip" data-placement="bottom" data-original-title="Estacionamientos"><?php echo $GIA['parking']; ?></span> 
         <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $GIA['kitchen']; ?></span> </div>
-
     </div>
+
     <div class="col-lg-12 col-sm-6 ">
-    <div class="enquiry">
-      <h6><span class="glyphicon glyphicon-envelope"></span>Consultar</h6>
-      <form role="form">
-        <input type="text" class="form-control" placeholder="Nombre completo"/>
-        <input type="text" class="form-control" placeholder="Correo electrónico"/>
-        <input type="text" class="form-control" placeholder="Número de teléfono"/>
-        <textarea rows="6" class="form-control" placeholder="¿Qué tienes en mente?"></textarea>
-        <button type="submit" class="btn btn-primary" name="Submit">Enviar Mensaje</button>
-      </form>
-     </div>         
+      <div class="enquiry">
+        <h6><span class="glyphicon glyphicon-envelope"></span>Consultar</h6>
+        <form role="form" id="SendMessageSuscriptor">
+          <input type="hidden" name="sus_article" id="sus_article" value="<?php echo $GIA['title']; ?>" />
+
+          <input type="text" id="sus_fullname" name="sus_fullname" class="form-control" placeholder="Nombre completo"/>
+          <input type="text" id="sus_email" name="sus_email" class="form-control" placeholder="Correo electrónico"/>
+          <input type="text" id="sus_numberphone" name="sus_numberphone" class="form-control" placeholder="Número de teléfono"/>
+          <textarea rows="6" id="sus_message" name="sus_message" class="form-control" placeholder="¿Qué tienes en mente?"></textarea>
+          <button type="button" id="sus_send_message" class="btn btn-primary" name="sus_send_message">Enviar Mensaje</button>
+        </form>
+       </div>         
     </div>
       </div>
     </div>

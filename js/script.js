@@ -68,20 +68,39 @@ function Go(){
 
 function form_suscriptions_side(){
   $.ajax({
-      url: "php/InsertSuscription.php",
-      type: "POST",
-      data: $("#form_suscriptions_side").serialize(),
-      success: function(data){
-        if (data == "OK"){
-          $("#email_suscription_").val("");
-          $(".OpenModalSuscriptions").click();
-        } else if (data == "Exists"){
-          $("#email_suscription_").val("");
-          $(".OMSuscriptionError").click();
-        }
+    url: "php/InsertSuscription.php",
+    type: "POST",
+    data: $("#form_suscriptions_side").serialize(),
+    success: function(data){
+      if (data == "OK"){
+        $("#email_suscription_").val("");
+        $(".OpenModalSuscriptions").click();
+      } else if (data == "Exists"){
+        $("#email_suscription_").val("");
+        $(".OMSuscriptionError").click();
       }
-    });
+    }
+  });
 }
+
+$("#sus_send_message").click(function(){
+  $.ajax({
+    url: "php/sendmail.php",
+    type: "POST",
+    data: $("#SendMessageSuscriptor").serialize(),
+    success: function(data){
+      if (data == "OK"){
+        $("#sus_fullname").val("");
+        $("#sus_email").val("");
+        $("#sus_numberphone").val("");
+        $("#sus_message").val("");
+        alert("Ok");
+      } else {
+        alert("Ha ocurrido el siguiente error: " + data);
+      }
+    }
+  });
+});
 
 $("#exampleInputPassword2").keypress(function(e) {
   if(e.which == 13) {

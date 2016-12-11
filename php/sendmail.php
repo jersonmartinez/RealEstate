@@ -6,29 +6,29 @@
 	$mail = new PHPMailer;
 
 	//From email address and name
-	$mail->From = "jersonmartinezsm@gmail.com";
-	$mail->FromName = "Jerson A. Martínez M.";
+	$mail->From = $_POST['sus_email'];
+	$mail->FromName = $_POST['sus_fullname'];
 
 	//To address and name
-	$mail->addAddress("sidemasterdelfuturo@gmail.com", "Side Master");
-	$mail->addAddress("sidemasterdelfuturo@gmail.com"); //Recipient name is optional
+	$mail->addAddress("jersonmartinezsm@gmail.com", "Jerson Martínez");
+	// $mail->addAddress("jersonmartinezsm@gmail.com"); //Recipient name is optional
 
 	//Address to which recipient will reply
-	$mail->addReplyTo("respondeaqui@domain.com", "Responder");
+	$mail->addReplyTo("sidemasterdelfuturo@gmail.com", "Responder");
 
 	//CC and BCC optional.
-	$mail->addCC("cc@example.com");
-	$mail->addBCC("bcc@example.com");
+	// $mail->addCC("cc@example.com");
+	// $mail->addBCC("bcc@example.com");
 
 	//Send HTML or Plain Text email
 	$mail->isHTML(true);
 
-	$mail->Subject = "Prueba de Mensajería";
-	$mail->Body = "<i>Adding new text in the body of is message</i>";
-	$mail->AltBody = "This is the plain text version of the email content";
+	$mail->Subject = $_POST['sus_article'];
+	$mail->Body = $_POST['sus_message'];
+	$mail->AltBody = "Esta es la versión en texto plano";
 
 	if(!$mail->send())
 	    echo "Mailer Error: " . $mail->ErrorInfo;
 	else 
-	    echo "Message has been sent successfully";
+	    echo "OK";
 ?>
