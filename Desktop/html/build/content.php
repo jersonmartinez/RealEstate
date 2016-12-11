@@ -96,8 +96,6 @@
             </div>
         </div>
 
-        <?php // echo nicetime(date("Y-m-d H:i", $RLogout['date_log_unix'])); ?>
-
         <div class="row  no-margin-bottom">
             <div class="col-sm-6 col-xs-12">
                 <div class="card card-success">
@@ -109,49 +107,42 @@
                     </div>
                     <div class="card-body no-padding">
                         <ul class="message-list">
-                            <a href="#">
-                                <li>
-                                    <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
-                                    <div class="message-block">
-                                        <div><span class="username">Jerson</span> <span class="message-datetime">12 min ago</span>
-                                        </div>
-                                        <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                    </div>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li>
-                                    <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
-                                    <div class="message-block">
-                                        <div><span class="username">Tui2Tone</span> <span class="message-datetime">15 min ago</span>
-                                        </div>
-                                        <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                    </div>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li>
-                                    <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
-                                    <div class="message-block">
-                                        <div><span class="username">Tui2Tone</span> <span class="message-datetime">2 hour ago</span>
-                                        </div>
-                                        <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                    </div>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li>
-                                    <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
-                                    <div class="message-block">
-                                        <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                        </div>
-                                        <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                    </div>
-                                </li>
-                            </a>
+
+                            <?php
+                                include ("build/CalcDate.php");
+                                $ConexMessage = $Conexion->query("SELECT * FROM sus_message ORDER BY id DESC LIMIT 4;");
+
+                                while ($CM = $ConexMessage->fetch_array(MYSQLI_ASSOC)){
+                                    $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$CM['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
+                                    
+                                    ?>
+                                        <a href="#">
+                                            <li>
+                                                <img src="<?php echo "../".$GetImgArt['folder'].$GetImgArt['src']; ?>" width="60px" height="60px" class="profile-img pull-left">
+                                           
+                                                <div class="message-block">
+                                                    <div><span class="username"><?php echo $CM['fullname']; ?></span> <span class="message-datetime"><?php echo nicetime(date("Y-m-d H:i", $CM['date_log_unix'])); ?></span>
+                                                    </div>
+                                                    <div class="message">
+                                                        <?php 
+                                                            echo substr($CM['message'], 0, 260); 
+
+                                                            if (strlen($CM['message']) > 260){
+                                                                echo "...";
+                                                            }
+                                                        ?>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                        </a>
+                                    <?php
+                                }
+                            ?>
+
                             <a href="#" id="message-load-more">
                                 <li class="text-center load-more">
-                                    <i class="fa fa-refresh"></i> load more..
+                                    <i class="fa fa-refresh"></i> Cargar más...
                                 </li>
                             </a>
                         </ul>
