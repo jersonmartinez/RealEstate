@@ -14,7 +14,7 @@
                 	</div>
                 </div>
             </div>
-            <?php include ("build/modals.php"); ?>
+<?php include ("build/modals.php");?>
         </div>
     </div>
 </div>

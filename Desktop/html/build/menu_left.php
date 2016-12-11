@@ -68,7 +68,6 @@
                     </a>
                 </li>
 
-
                  <li class="about_us__item">
                     <a href="about_us">
                         <span class="icon fa fa-pencil"></span><span class="title">Escribir sobre nosotros</span>
@@ -100,17 +99,17 @@
                 </li>
 
                 <li class="four__item">
-                    <a href="view_desktop.php">
+                    <a href="view_desktop">
                         <span class="icon fa fa-desktop"></span><span class="title">Pantalla de escritorio</span>
                     </a>
                 </li>
                 <li class="five__item">
-                    <a href="view_mobile.php">
+                    <a href="view_mobile">
                         <span class="icon fa fa-mobile"></span><span class="title">Vista teléfono y tablet</span>
                     </a>
                 </li>
                 <li class="last__item">
-                    <a href="license.php">
+                    <a href="license">
                         <span class="icon fa fa-thumbs-o-up"></span><span class="title">Licencia</span>
                     </a>
                 </li>
