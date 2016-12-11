@@ -89,3 +89,9 @@ $("#exampleInputPassword2").keypress(function(e) {
     $('#StartSession').click();
    }
 });
+
+$("#email_suscription_").keypress(function(event){
+  if (event.which == 13){
+    $("#notifynowemail").click();
+  }
+});
