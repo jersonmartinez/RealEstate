@@ -1,19 +1,26 @@
 <?php
-
+include ("../Desktop/connect_server/connect_server.php");
 require_once "../vendor/autoload.php";
+
+$id_art    = $_POST['sus_idArt'];
+$fullname  = $_POST['sus_fullname'];
+$email     = $_POST['sus_email'];
+$phone     = $_POST['sus_numberphone'];
+$message   = $_POST['sus_message'];
+$title_art = $_POST['sus_article'];
 
 //PHPMailer Object
 $mail = new PHPMailer;
 
 //From email address and name
-$mail->From     = $_POST['sus_email'];
-$mail->FromName = $_POST['sus_fullname'];
+$mail->From     = $email;
+$mail->FromName = $fullname;
 
 //To address and name
 $mail->addAddress("jersonmartinezsm@gmail.com", "Jerson Martínez");
 // $mail->addAddress("jersonmartinezsm@gmail.com"); //Recipient name is optional
 
-//Address to which recipient will reply
+//Address to which recipient will reply, aquí debería ir el del cliente suscrito.
 $mail->addReplyTo("sidemasterdelfuturo@gmail.com", "Responder");
 
 //CC and BCC optional.
@@ -23,15 +30,20 @@ $mail->addReplyTo("sidemasterdelfuturo@gmail.com", "Responder");
 //Send HTML or Plain Text email
 $mail->isHTML(true);
 
-$mail->Subject = $_POST['sus_article'];
-$mail->Body    = $_POST['sus_message'];
-$mail->AltBody = "Esta es la versión en texto plano";
+$mail->Subject = $title_art;
+$mail->Body    = $message;
+$mail->AltBody = "Mi número de teléfono es: ".$phone;
+
+$Q = "INSERT INTO sus_message (id, fullname, email, phone, message, id_art, title_art) VALUES ('','".$fullname."','".$email."','".$phone."','".$message."','".$id_art."','".$title_art."');";
 
 if (!$mail->send()) {
 	echo "Mailer Error: ".$mail->ErrorInfo;
 } else {
-
-	echo "OK";
+	if ($Conexion->query($Q)) {
+		echo "OK";
+	} else {
+		echo "Fail";
+	}
 }
 
 ?>

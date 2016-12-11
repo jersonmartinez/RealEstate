@@ -24,7 +24,8 @@ $tables = array('admin_info' => "CREATE TABLE admin_info (
 			description VARCHAR(1000),
 			folder VARCHAR(300),
 			src VARCHAR(500),
-			date_log DATETIME NOT NULL DEFAULT NOW(),
+			#-- Tenía un DEFAULT NOW() Problema en c9.io --
+			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL,
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
@@ -55,7 +56,8 @@ $tables = array('admin_info' => "CREATE TABLE admin_info (
 			longitude VARCHAR(50),
 			latitude VARCHAR(50),
 
-			date_log DATETIME NOT NULL DEFAULT NOW(),
+			#-- Tenía un DEFAULT NOW() Problema en c9.io --
+			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL,
 
@@ -67,7 +69,8 @@ $tables = array('admin_info' => "CREATE TABLE admin_info (
 			id_img INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 			folder VARCHAR(300) NOT NULL,
 			src VARCHAR(300) UNIQUE NOT NULL,
-			date_log DATETIME NOT NULL DEFAULT NOW(),
+			#-- Tenía un DEFAULT NOW() Problema en c9.io --
+			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			id_art INT UNSIGNED NOT NULL,
 			FOREIGN KEY (id_art) REFERENCES article(id_art) ON UPDATE CASCADE ON DELETE CASCADE
@@ -76,13 +79,15 @@ $tables = array('admin_info' => "CREATE TABLE admin_info (
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 			folder VARCHAR(300) NOT NULL,
 			src VARCHAR(300) UNIQUE NOT NULL,
-			created_at DATETIME NOT NULL DEFAULT NOW()
+			#-- Tenía un DEFAULT NOW() Problema en c9.io --
+			created_at DATETIME NOT NULL
 		)",
 	'img_perfil' => "CREATE TABLE img_perfil (
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 			folder VARCHAR(300) NOT NULL,
 			src VARCHAR(300) UNIQUE NOT NULL,
-			created_at DATETIME NOT NULL DEFAULT NOW(),
+			#-- Tenía un DEFAULT NOW() Problema en c9.io --
+			created_at DATETIME NOT NULL,
 			username VARCHAR(50) NOT NULL,
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)",
@@ -115,6 +120,15 @@ $tables = array('admin_info' => "CREATE TABLE admin_info (
 			tt VARCHAR(500),
 			gp VARCHAR(500),
 			li VARCHAR(500)
+		)",
+	'sus_message' => "CREATE TABLE sus_message (
+			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+			fullname VARCHAR(255) NOT NULL,
+			email VARCHAR(255) NOT NULL,
+			phone VARCHAR(20) NOT NULL,
+			message VARCHAR(5000) NOT NULL,
+			id_art INT UNSIGNED NOT NULL,
+			title_art VARCHAR(1000) NOT NULL
 		)"
 );
 

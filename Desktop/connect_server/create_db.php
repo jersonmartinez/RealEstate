@@ -120,6 +120,15 @@
 			tt VARCHAR(500), 
 			gp VARCHAR(500), 
 			li VARCHAR(500)
+		)", 
+		'sus_message' => "CREATE TABLE sus_message (
+			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+			fullname VARCHAR(255) NOT NULL, 
+			email VARCHAR(255) NOT NULL, 
+			phone VARCHAR(20) NOT NULL, 
+			message VARCHAR(5000) NOT NULL, 
+			id_art INT UNSIGNED NOT NULL, 
+			title_art VARCHAR(1000) NOT NULL
 		)"
 	);
 

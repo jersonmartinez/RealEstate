@@ -232,6 +232,7 @@
         <h6><span class="glyphicon glyphicon-envelope"></span>Consultar</h6>
         <form role="form" id="SendMessageSuscriptor">
           <input type="hidden" name="sus_article" id="sus_article" value="<?php echo $GIA['title']; ?>" />
+          <input type="hidden" name="sus_idArt" id="sus_idArt" value="<?php echo $GIA['id_art']; ?>" />
 
           <input type="text" id="sus_fullname" name="sus_fullname" class="form-control" placeholder="Nombre completo"/>
           <input type="text" id="sus_email" name="sus_email" class="form-control" placeholder="Correo electrónico"/>
