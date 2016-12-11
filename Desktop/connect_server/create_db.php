@@ -127,6 +127,7 @@
 			email VARCHAR(255) NOT NULL, 
 			phone VARCHAR(20) NOT NULL, 
 			message VARCHAR(5000) NOT NULL, 
+			date_time DATETIME NOT NULL, 
 			id_art INT UNSIGNED NOT NULL, 
 			title_art VARCHAR(1000) NOT NULL
 		)"

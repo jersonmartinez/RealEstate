@@ -7,15 +7,16 @@
                         <div class="card-body">
                             <i class="icon fa fa-inbox fa-4x"></i>
                             <div class="content">
-                                <?php
-                                    $CountVisit = $Conexion->query("SELECT * FROM count_visit;");
-                                    if ($CountVisit->num_rows == 0){
-                                        $CountVisit = 0;
-                                    } else {
-                                        $CountVisit = $CountVisit->num_rows;
-                                    }
-                                ?>
-                                <div class="title"><?php echo $CountVisit; ?></div>
+<?php
+$CountVisit = $Conexion->query("SELECT * FROM count_visit;");
+
+if ($CountVisit->num_rows == 0) {
+	$CountVisit = 0;
+} else {
+	$CountVisit = $CountVisit->num_rows;
+}
+?>
+                                <div class="title"><?php echo $CountVisit;?></div>
                                 <div class="sub-title">Visitantes</div>
                             </div>
                             <div class="clear-both"></div>
@@ -30,15 +31,16 @@
                             <!-- <i class="icon fa fa-comments fa-4x"></i> -->
                             <i class="icon fa fa-users fa-4x"></i>
                             <div class="content">
-                                <?php
-                                    $CountUsers = $Conexion->query("SELECT * FROM admin_info;");
-                                    if ($CountUsers->num_rows == 0){
-                                        $CountUsers = 0;
-                                    } else {
-                                        $CountUsers = $CountUsers->num_rows;
-                                    }
-                                ?>
-                                <div class="title"><?php echo $CountUsers; ?></div>
+<?php
+$CountUsers = $Conexion->query("SELECT * FROM admin_info;");
+
+if ($CountUsers->num_rows == 0) {
+	$CountUsers = 0;
+} else {
+	$CountUsers = $CountUsers->num_rows;
+}
+?>
+                                <div class="title"><?php echo $CountUsers;?></div>
                                 <div class="sub-title">Usuarios</div>
                             </div>
                             <div class="clear-both"></div>
@@ -53,16 +55,17 @@
                             <i class="icon fa fa-tags fa-4x"></i>
                             <div class="content">
 
-                                <?php
-                                    $CountArticle = $Conexion->query("SELECT * FROM article;");
-                                    if ($CountArticle->num_rows == 0){
-                                        $CountArticle = 0;
-                                    } else {
-                                        $CountArticle = $CountArticle->num_rows;
-                                    }
-                                ?>
+<?php
+$CountArticle = $Conexion->query("SELECT * FROM article;");
 
-                                <div class="title"><?php echo $CountArticle; ?></div>
+if ($CountArticle->num_rows == 0) {
+	$CountArticle = 0;
+} else {
+	$CountArticle = $CountArticle->num_rows;
+}
+?>
+
+                                <div class="title"><?php echo $CountArticle;?></div>
                                 <div class="sub-title">Artículos</div>
                             </div>
                             <div class="clear-both"></div>
@@ -77,16 +80,17 @@
                             <i class="icon fa fa-user-secret fa-4x"></i>
                             <div class="content">
 
-                            <?php
-                                $CountAgent = $Conexion->query("SELECT * FROM agents;");
-                                if ($CountAgent->num_rows == 0){
-                                    $CountAgent = 0;
-                                } else {
-                                    $CountAgent = $CountAgent->num_rows;
-                                }
-                            ?>
+<?php
+$CountAgent = $Conexion->query("SELECT * FROM agents;");
 
-                                <div class="title"><?php echo $CountAgent; ?></div>
+if ($CountAgent->num_rows == 0) {
+	$CountAgent = 0;
+} else {
+	$CountAgent = $CountAgent->num_rows;
+}
+?>
+
+                                <div class="title"><?php echo $CountAgent;?></div>
                                 <div class="sub-title">Agentes</div>
                             </div>
                             <div class="clear-both"></div>
@@ -214,7 +218,7 @@
                     </div>
                 </div>
             </div>
-        <?php include ("build/modals.php"); ?>
+<?php include ("build/modals.php");?>
         </div>
     </div>
 </div>
