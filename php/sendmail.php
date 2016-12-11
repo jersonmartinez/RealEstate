@@ -34,7 +34,7 @@
 	$mail->Body = $message;
 	$mail->AltBody = "Mi número de teléfono es: ".$phone;
 
-	$Q = "INSERT INTO sus_message (id, fullname, email, phone, message, id_art, title_art) VALUES ('','".$fullname."','".$email."','".$phone."','".$message."','".$id_art."','".$title_art."');";
+	$Q = "INSERT INTO sus_message (id, fullname, email, phone, message, id_art, date_log_unix, title_art) VALUES ('','".$fullname."','".$email."','".$phone."','".$message."','".$id_art."','".time()."','".$title_art."');";
 	
 	if(!$mail->send()){
 	    echo "Mailer Error: " . $mail->ErrorInfo;

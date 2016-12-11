@@ -127,8 +127,8 @@ $tables = array('admin_info' => "CREATE TABLE admin_info (
 			email VARCHAR(255) NOT NULL,
 			phone VARCHAR(20) NOT NULL,
 			message VARCHAR(5000) NOT NULL,
-			date_time DATETIME NOT NULL,
 			id_art INT UNSIGNED NOT NULL,
+			datetime VARCHAR(30) NOT NULL,
 			title_art VARCHAR(1000) NOT NULL
 		)"
 );
