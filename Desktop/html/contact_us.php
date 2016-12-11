@@ -18,16 +18,16 @@
                 
                 <?php include ("build/menu_left.php"); ?>
                 
-                <?php include ("build/view_about_us.php"); ?>
+                <?php include ("build/view_contact_us.php"); ?>
             </div>
-            
+
             <?php include ("build/footer.php"); ?>
         </div>
         <?php include ("build/scripts.php"); ?>
         <script type="text/javascript">
             setTimeout(function(){
                 $("navbar-nav .active").removeClass("active");
-                $(".about_us__item").addClass("active");
+                $(".contact_us__item").addClass("active");
             }, 100);
         </script>
     </body>
