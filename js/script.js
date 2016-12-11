@@ -94,9 +94,9 @@ $("#sus_send_message").click(function(){
         $("#sus_email").val("");
         $("#sus_numberphone").val("");
         $("#sus_message").val("");
-        alert("Ok");
+        $(".SendMessageOkay").click();
       } else {
-        alert("Ha ocurrido el siguiente error: " + data);
+        $(".SendMessageFail").click();
       }
     }
   });
