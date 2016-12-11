@@ -13,9 +13,9 @@
     <div class="col-lg-3 col-sm-3">
       <h4>Hoja informativa</h4>
       <p>¡Entérate de las últimas propiedades en nuestro mercado!.</p>
-      <form id="form_suscriptions_side" class="form-inline" role="form">
+      <form id="form_suscriptions_side" class="form-inline" role="form" onsubmit="return false;">
         <input type="text" id="email_suscription_" name="email_suscription_" placeholder="Escriba su dirección de correo" class="form-control">
-        <button class="btn btn-success" onclick="javascript: form_suscriptions_side();" type="button">¡Notificarme!</button>
+        <button id="notifynowemail" class="btn btn-success" onclick="javascript: form_suscriptions_side();" type="button">¡Notificarme!</button>
       </form>
     </div>
 

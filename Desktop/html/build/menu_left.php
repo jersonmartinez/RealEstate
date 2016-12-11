@@ -62,6 +62,13 @@
                     </div>
                 </li>
 
+                <li class="add_property__item">
+                    <a href="#" onclick="javascript: AddNewPropertyType();">
+                        <span class="icon fa fa-tasks"></span><span class="title">Agregar propiedad</span>
+                    </a>
+                </li>
+
+
                  <li class="about_us__item">
                     <a href="about_us">
                         <span class="icon fa fa-pencil"></span><span class="title">Escribir sobre nosotros</span>
@@ -73,7 +80,7 @@
                         <span class="icon fa fa-slack"></span><span class="title">Contacto y redes sociales</span>
                     </a>
                 </li>
-               
+
                 <li class="panel panel-default dropdown three__item">
                     <a data-toggle="collapse" href="#dropdown-icon">
                         <span class="icon fa fa-cogs"></span><span class="title">Configuración de mi cuenta</span>
@@ -91,6 +98,7 @@
                         </div>
                     </div>
                 </li>
+
                 <li class="four__item">
                     <a href="view_desktop.php">
                         <span class="icon fa fa-desktop"></span><span class="title">Pantalla de escritorio</span>
