@@ -95,6 +95,9 @@
                 </a>
             </div>
         </div>
+
+        <?php // echo nicetime(date("Y-m-d H:i", $RLogout['date_log_unix'])); ?>
+
         <div class="row  no-margin-bottom">
             <div class="col-sm-6 col-xs-12">
                 <div class="card card-success">
