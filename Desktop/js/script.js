@@ -810,7 +810,6 @@ function loadAboutUs(){
    			$(".trumbowyg-editor").html(data);  		
 	    }
   	});
-
 }
 
 function AddNowAboutUs(){
@@ -859,13 +858,13 @@ function LoadMessage(id_art){
 	    	} else {
 	    		$(".ShowMessageBox").html(data);
 	    		$(".OpenMessage").click();
+	    		GetMessageAnswer();
 	    	}
 	    }
   	});
 }
 
 function SendMessageAnswer(){
-
 	if ($("#answer_message").val() == ""){
 		$(".HeyHopeOneMoment").click();
 		return;
@@ -879,9 +878,21 @@ function SendMessageAnswer(){
 	    	if (data == "OK"){
 	    		$(".MessageSuccessError").html("<div class='alert alert-success' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>¡Éxito!.</strong> El mensaje se ha enviado correctamente.</div>").fadeIn(1000);
 	    		$("#answer_message").val("");
+	    		GetMessageAnswer();
 	    	} else {
 	    		$(".MessageSuccessError").html("<div class='alert alert-danger' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>¡Up's!.</strong> El mensaje no se ha podido enviar, recargue la página e inténtelo nuevamente.</div>");
 	    	}
+	    }
+  	});
+}
+
+function GetMessageAnswer(){
+	$.ajax({
+	    url: "build/LoadMessagesAnswer.php",
+	    type: "POST",
+	    data: $("#SaveDataIdMessage").serialize(),
+	    success: function(data){
+	    	$(".WriteMessagesAnswer").html(data);	
 	    }
   	});
 }
