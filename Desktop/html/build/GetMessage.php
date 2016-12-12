@@ -21,11 +21,18 @@
 
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-xs-8">
+                    <div class="col-xs-7">
                         <span class="label label-default" style="font-size: 13px;" title="<?php echo $ThisMessage['title_art']; ?>" ><?php echo substr($ThisMessage['title_art'], 0, 50); ?></span>
                     </div>
                     <div class="col-xs-1">
-                        <i class="fa fa-user fa-lg" title="<?php echo $ThisMessage['fullname']; ?>" aria-hidden="true" style="cursor: pointer;"></i>
+                        <?php
+                            $GetIdAgent = $Conexion->query("SELECT id_agent FROM article WHERE id_art='".$ThisMessage['id_art']."';")->fetch_array(MYSQLI_ASSOC)['id_agent'];
+                            $GetNamesAgent = $Conexion->query("SELECT names, lastnames FROM agents WHERE id_agent='".$GetIdAgent."';")->fetch_array(MYSQLI_ASSOC);
+                        ?>
+                        <i class="fa fa-user-secret fa-lg" title="<?php echo "Agente: ".$GetNamesAgent['names']." ".$GetNamesAgent['lastnames']; ?>" aria-hidden="true" style="cursor: pointer;"></i>
+                    </div>
+                    <div class="col-xs-1">
+                        <i class="fa fa-user fa-lg" title="<?php echo "Lo envía ".$ThisMessage['fullname']; ?>" aria-hidden="true" style="cursor: pointer;"></i>
                     </div>
                     <div class="col-xs-1">
                         <i class="fa fa-phone-square fa-lg" title="<?php echo $ThisMessage['phone']; ?>" aria-hidden="true" style="cursor: pointer;"></i>
@@ -59,37 +66,12 @@
                 </form>
             </div>  
 
-            <div class="modal-footer">
+            <form id="SaveDataIdMessage">
+                <input type="hidden" name="SDIdMessage" value="<?php echo $ThisMessage['id']; ?>" />
+            </form>
 
-                <div class="row">
-                    <div class="col-xs-8">
-                        <span class="label label-default" style="float: left; font-size: 13px;" title="<?php echo $ThisMessage['title_art']; ?>" ><?php echo substr($ThisMessage['title_art'], 0, 50); ?></span>
-                    </div>
-
-                    <div class="col-xs-1">
-                        <i class="fa fa-user fa-lg" title="<?php echo $ThisMessage['fullname']; ?>" aria-hidden="true" style="cursor: pointer;"></i>
-                    </div>
-                    <div class="col-xs-1">
-                        <i class="fa fa-phone-square fa-lg" title="<?php echo $ThisMessage['phone']; ?>" aria-hidden="true" style="cursor: pointer;"></i>
-                    </div>
-                    <div class="col-xs-1">
-                        <i class="fa fa-comments fa-lg" title="<?php echo $ThisMessage['email'] ?>" aria-hidden="true" style="cursor: pointer;"></i>
-                    </div>
-                    <div class="col-xs-1">
-                        <i class="fa fa-globe fa-lg" title="<?php echo date("Y-m-d H:i", $ThisMessage['date_log_unix']); ?>" aria-hidden="true" style="cursor: pointer;"></i>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-10">
-                        <blockquote class="blockquote-rounded blockquote-reverse">
-                            <p style="text-align: justify; font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id placeat maiores tempora non provident, mollitia eveniet qui a iusto ducimus quidem vero officiis similique ipsum explicabo et suscipit, totam ipsam.</p>
-                        </blockquote>
-                    </div>
-                    <div class="col-xs-2">
-                        <img src="<?php echo "../".$ImgArtMsg['folder'].$ImgArtMsg['src']; ?>" class="img_property_answer" alt="Imagen de la propiedad" />
-                    </div>
-                </div>
+            <div class="WriteMessagesAnswer">
+                <!-- Here the code that works as container to open messages answer -->
             </div>
         <?php   
     } else {
