@@ -1382,3 +1382,23 @@ div.show_agent_img_perfil_change img {
 #ImgArtBig {
   width: 100%;
 }
+
+#answer_message {
+  width: 568px;
+  max-width: 100%;
+  min-width: 100%;
+  height: 70px;
+  max-height: 100px;
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #8c8080;
+  margin-bottom: 5px;
+}
+
+.img_property {
+  width: 100%;
+  border-radius: 50%;
+  height: 115px;
+  max-height: 150px;
+}

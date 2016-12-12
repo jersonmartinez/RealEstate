@@ -845,3 +845,37 @@ function LoadFormAboutContact(){
 	    }
   	});
 }
+
+function LoadMessage(id_art){
+	$("#IdMessage").val(id_art);
+
+	$.ajax({
+	    url: "build/GetMessage.php",
+	    type: "POST",
+	    data: $("#SendIdMessage").serialize(),
+	    success: function(data){
+	    	if (data == "Fail"){
+	    		$(".OpenModalMessageError").click();
+	    	} else {
+	    		$(".ShowMessageBox").html(data);
+	    		$(".OpenMessage").click();
+	    	}
+	    }
+  	});
+}
+
+// function SendMessageAnswer(){
+// 	$.ajax({
+// 	    url: "build/SendMessageAnswer.php",
+// 	    type: "POST",
+// 	    data: $("#SendAnswerMessage").serialize(),
+// 	    success: function(data){
+// 	    	if (data == "Fail"){
+// 	    		$(".OpenModalMessageError").click();
+// 	    	} else {
+// 	    		$(".ShowMessageBox").html(data);
+// 	    		$(".OpenMessage").click();
+// 	    	}
+// 	    }
+//   	});
+// }

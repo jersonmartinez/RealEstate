@@ -990,3 +990,36 @@
         </div>
     </div>
 </div>
+
+<!-- Mostrar más información sobre el mensaje recibido -->
+<input type="hidden" class="OpenMessage" data-toggle="modal" data-target="#OpenMessage"  />
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="OpenMessage" tabindex="1" role="dialog" aria-labelledby="OpenedMessage" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ShowMessageBox">
+            <!-- Here the code PHP with the information of the message -->
+        </div>
+    </div>
+</div>
+
+<!-- Problemas al extraer los datos de la DB / sus_message -->
+<input type="hidden" class="OpenModalMessageError" data-toggle="modal" data-target="#OpenModalMessageError"  />
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="OpenModalMessageError" tabindex="1" role="dialog" aria-labelledby="PMErrorMessage" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="PMErrorMessage">Up's, problemas.</h4>
+            </div>
+            <div class="modal-body">
+                <p>Up's. Ha ocurrido un problema al intentar extraer detalles del mensaje, por favor, recargue la página e intentelo nuevamente. ¡Gracias!.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

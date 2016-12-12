@@ -116,7 +116,7 @@
                                     $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$CM['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
                                     
                                     ?>
-                                        <a href="#">
+                                        <a href="#" onclick="LoadMessage(<?php echo $CM['id']; ?>);">
                                             <li>
                                                 <img src="<?php echo "../".$GetImgArt['folder'].$GetImgArt['src']; ?>" width="60px" height="60px" class="profile-img pull-left">
                                            
@@ -139,6 +139,10 @@
                                     <?php
                                 }
                             ?>
+
+                            <form id="SendIdMessage">
+                                <input type="hidden" id="IdMessage" name="IdMessage" value="" />
+                            </form>
 
                             <a href="#" id="message-load-more">
                                 <li class="text-center load-more">
