@@ -1023,3 +1023,24 @@
         </div>
     </div>
 </div>
+
+<!-- Por favor, rellenar el campo de mensaje / sus_message -->
+<input type="hidden" class="HeyHopeOneMoment" data-toggle="modal" data-target="#HeyHopeOneMoment"  />
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="HeyHopeOneMoment" tabindex="1" role="dialog" aria-labelledby="HeyhopeMoment" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="HeyhopeMoment">Hey, hey, hey, espera un momento!.</h4>
+            </div>
+            <div class="modal-body">
+                <p>No ha rellenado el campo de mensaje, hasta que lo haga, el mensaje será enviado, por favor, escriba su mensaje. ¡Gracias!.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

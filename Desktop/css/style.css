@@ -1402,3 +1402,10 @@ div.show_agent_img_perfil_change img {
   height: 115px;
   max-height: 150px;
 }
+
+.img_property_answer {
+  width: 100%;
+  border-radius: 50%;
+  height: 115px;
+  max-height: 70px;
+}

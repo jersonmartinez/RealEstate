@@ -864,18 +864,24 @@ function LoadMessage(id_art){
   	});
 }
 
-// function SendMessageAnswer(){
-// 	$.ajax({
-// 	    url: "build/SendMessageAnswer.php",
-// 	    type: "POST",
-// 	    data: $("#SendAnswerMessage").serialize(),
-// 	    success: function(data){
-// 	    	if (data == "Fail"){
-// 	    		$(".OpenModalMessageError").click();
-// 	    	} else {
-// 	    		$(".ShowMessageBox").html(data);
-// 	    		$(".OpenMessage").click();
-// 	    	}
-// 	    }
-//   	});
-// }
+function SendMessageAnswer(){
+
+	if ($("#answer_message").val() == ""){
+		$(".HeyHopeOneMoment").click();
+		return;
+	}
+
+	$.ajax({
+	    url: "build/SendMessageAnswer.php",
+	    type: "POST",
+	    data: $("#SendAnswerMessage").serialize(),
+	    success: function(data){
+	    	if (data == "OK"){
+	    		$(".MessageSuccessError").html("<div class='alert alert-success' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>¡Éxito!.</strong> El mensaje se ha enviado correctamente.</div>").fadeIn(1000);
+	    		$("#answer_message").val("");
+	    	} else {
+	    		$(".MessageSuccessError").html("<div class='alert alert-danger' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>¡Up's!.</strong> El mensaje no se ha podido enviar, recargue la página e inténtelo nuevamente.</div>");
+	    	}
+	    }
+  	});
+}
