@@ -10,13 +10,15 @@ function compruebaTecla(evt){
     var tecla = evt.which || evt.keyCode;
     if (tecla == 17){
     	CountKey++;
-    	if (CountKey == 1){
-          $("#button_modal_click").click();
-        } else if (CountKey > 5){
-          /*Aquí cerrará la ventana modal*/
-          $("#loginpop").click();
-       		CountKey = 0;
-       	}
+      if (evt.shiftKey){
+        	if (CountKey == 1){
+            $("#button_modal_click").click();
+          } else if (CountKey > 0){
+            /*Aquí cerrará la ventana modal*/
+            $("#loginpop").click();
+          	CountKey = 0;
+          }
+      }
     }
 }
 
