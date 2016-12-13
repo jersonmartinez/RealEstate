@@ -27,8 +27,8 @@
                 <h4>
                   <a href="property-detail.php?id_art=<?php echo $Qu['id_art']; ?>" title="<?php echo $Qu['title']; ?>">
                     <?php 
-                      echo substr($Qu['title'],0,20); 
-                      if (strlen($Qu['title']) > 20){
+                      echo substr($Qu['title'],0,18); 
+                      if (strlen($Qu['title']) > 18){
                         echo "...";
                       }
                     ?>
