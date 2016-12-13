@@ -24,7 +24,16 @@
                   ?>
                   
                 </div>
-                <h4><a href="property-detail.php?id_art=<?php echo $Qu['id_art']; ?>"><?php echo $Qu['title']; ?></a></h4>
+                <h4>
+                  <a href="property-detail.php?id_art=<?php echo $Qu['id_art']; ?>" title="<?php echo $Qu['title']; ?>">
+                    <?php 
+                      echo substr($Qu['title'],0,20); 
+                      if (strlen($Qu['title']) > 20){
+                        echo "...";
+                      }
+                    ?>
+                  </a>
+                </h4>
                 <p class="price">Precio: $<?php echo $Qu['price']; ?></p>
                 
                 <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Habitaciones"><?php echo $Qu['bed_room']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $Qu['living_room']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Estacionamientos"><?php echo $Qu['parking']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $Qu['kitchen']; ?></span> </div>
