@@ -100,10 +100,10 @@
               <p class="price">Precio: $<?php echo $GA['price']; ?></p>
               
               <div class="listing-detail">
-                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $GA['bed_room']; ?></span> 
-                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room"><?php echo $GA['living_room']; ?></span> 
-                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking"><?php echo $GA['parking']; ?></span> 
-                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen"><?php echo $GA['kitchen']; ?></span> 
+                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Habitaciones"><?php echo $GA['bed_room']; ?></span> 
+                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $GA['living_room']; ?></span> 
+                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Estacionamientos"><?php echo $GA['parking']; ?></span> 
+                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $GA['kitchen']; ?></span> 
               </div>
 
               <a class="btn btn-primary" href="property-detail.php?id_art=<?php echo $GA['id_art']; ?>">Ver detalles</a>
