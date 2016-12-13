@@ -36,7 +36,7 @@
               </select>
               </div>
               <div class="col-lg-3 col-sm-4">
-              <button class="btn btn-success" onclick="window.location.href='buysalerent.html'">Encontrar</button>
+              <button class="btn btn-success" onclick="window.location.href='buysalerent'">Encontrar</button>
               </div>
           </div>
         </div>

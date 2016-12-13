@@ -48,7 +48,7 @@
 <div class="container">
 <!-- Header Starts -->
   <div class="header">
-  <a href="index"><img src="images/logofinal.png" alt="Realestate"></a>
+  <a href="./"><img src="images/logofinal.png" alt="Realestate"></a>
       <ul class="pull-right">
         <li><a href="buysalerent">Ventas</a></li>         
         <li><a href="buysalerent">Alquilar</a></li>

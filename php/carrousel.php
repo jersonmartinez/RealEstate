@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="properties-listing spacer"> <a href="buysalerent.html" class="pull-right viewall">Ver todo el listado</a>
+  <div class="properties-listing spacer"> <a href="buysalerent" class="pull-right viewall">Ver todo el listado</a>
     <h2>Propiedades destacadas</h2>
     <div id="owl-example" class="owl-carousel">
 
