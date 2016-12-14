@@ -74,7 +74,7 @@
 <div class="row">
     
     <?php
-      $GetArticle = $Conexion->query("SELECT * FROM article;");
+      $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC;");
 
       while ($GA = $GetArticle->fetch_array(MYSQLI_ASSOC)){
         $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$GA['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
