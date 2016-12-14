@@ -5,10 +5,11 @@
 	$mensage = ''; //Declaramos una variable mensaje quue almacenara el resultado de las operaciones.
 
 	include ("../../connect_server/connect_server.php");
+	include ("FixString.php");
 
 	foreach ($_FILES as $key) { //Iteramos el arreglo de archivos
 		if ($key['error'] == UPLOAD_ERR_OK ) { //Si el archivo se paso correctamente Ccontinuamos 
-			$NombreOriginal = $key['name'];//Obtenemos el nombre original del archivo
+			$NombreOriginal = sanear_string($key['name']);//Obtenemos el nombre original del archivo
 			$temporal = $key['tmp_name']; //Obtenemos la ruta Original del archivo
 			$Destino = $ruta.$NombreOriginal;	//Creamos una ruta de destino con la variable ruta y el nombre original del archivo	
 			
