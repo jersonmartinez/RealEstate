@@ -6,7 +6,7 @@
 	}
 
 	@$Conexion = new TheCodeBrain("127.0.0.1", "SideMaster", "Inform@tico", "re");
-
+	
 	if ($Conexion->connect_error)
 		$error = true;
 	else
