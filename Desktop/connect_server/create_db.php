@@ -128,7 +128,7 @@
 			phone VARCHAR(20) NOT NULL, 
 			message VARCHAR(5000) NOT NULL, 
 			id_art INT UNSIGNED NOT NULL, 
-			datetime VARCHAR(30) NOT NULL, 
+			date_log_unix VARCHAR(30) NOT NULL, 
 			title_art VARCHAR(1000) NOT NULL
 		)", 
 		'answer_message' => "CREATE TABLE answer_message (
