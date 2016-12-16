@@ -18,40 +18,49 @@
             <li>
                 <a href="#" onclick="javascript: GoMainNow();" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-home fa-2x" style="margin-right: 10px"></i>Página principal</a>
             </li>
+
+            <?php
+                $QuantitySus = $Conexion->query("SELECT * FROM suscriptions WHERE viewed='No';")->num_rows;
+                $QuantityMsg = $Conexion->query("SELECT * FROM sus_message;")->num_rows;
+                $QuantityTotal = $QuantitySus + $QuantityMsg;
+            ?>
+
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o fa-2x"></i></a>
                 <ul class="dropdown-menu animated fadeInDown">
                     <li class="title">
-                        Notificaciones <span class="badge pull-right">10</span>
+                        Notificaciones <span class="badge pull-right"><?php echo $QuantityTotal; ?></span>
                     </li>
                     <li class="message">
                         No hay nuevas notificaciones
                     </li>
                 </ul>
             </li>
+
+
             <li class="dropdown danger">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o fa-2x"></i> 4</a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o fa-2x"></i> <?php echo $QuantityTotal; ?></a>
                 <ul class="dropdown-menu danger  animated fadeInDown">
                     <li class="title">
-                        Notificaciones <span class="badge pull-right">4</span>
+                        Notificaciones <span class="badge pull-right"><?php echo $QuantityTotal; ?></span>
                     </li>
                     <li>
                         <ul class="list-group notifications">
                             <a href="#" onclick="OpenListSuscriptions();">
                                 <li class="list-group-item" >
-                                    <span class="badge"><?php echo $Conexion->query("SELECT * FROM suscriptions WHERE viewed='No';")->num_rows; ?></span> <i class="fa fa-exclamation-circle icon"></i> Nuevas suscripciones
+                                    <span class="badge"><?php echo $QuantitySus; ?></span> <i class="fa fa-exclamation-circle icon"></i> Nuevas suscripciones
                                 </li>
                             </a>
-                            <a href="#">
+                            <a href="./">
                                 <li class="list-group-item">
-                                    <span class="badge danger">2</span> <i class="fa fa-comments icon"></i> Mensajes de posibles clientes
+                                    <span class="badge danger"><?php echo $QuantityMsg; ?></span> <i class="fa fa-comments icon"></i> Mensajes de posibles clientes
                                 </li>
                             </a>
-                            <a href="#">
+                            <!-- <a href="#">
                                 <li class="list-group-item message">
                                     Ver todo
                                 </li>
-                            </a>
+                            </a> -->
                         </ul>
                     </li>
                 </ul>

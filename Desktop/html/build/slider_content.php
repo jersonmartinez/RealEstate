@@ -1,6 +1,3 @@
-
-
-
 <div class="container-fluid">
     <div class="side-body padding-top">
         <div class="row">
@@ -46,7 +43,10 @@
                                     </div>
                                 </div>
 
-                                <form id="FormAddSlider<?php echo $RowArtTitle['id_art']; ?>"></form>
+                                <form id="FormAddSlider<?php echo $RowArtTitle['id_art']; ?>">
+                                    <input type="hidden" name="slider_id_art" id="slider_id_art" value="<?php echo $RowArtTitle['id_art']; ?>" />
+                                    <input type="hidden" name="slider_id_img" id="slider_id_img" value="<?php echo $RowArtTitle['id_art']; ?>" />
+                                </form>
                             <?php
                         }
                     ?>
