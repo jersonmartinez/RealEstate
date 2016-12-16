@@ -138,6 +138,13 @@
 			id_msg INT UNSIGNED NOT NULL, 
 			date_time_unix VARCHAR(30) NOT NULL, 
 			favorite INT
+		)", 
+		'simple_contact' => "CREATE TABLE simple_contact (
+			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+			fullname VARCHAR(50) NOT NULL, 
+			email VARCHAR(255) NOT NULL, 
+			phone VARCHAR(20) NOT NULL, 
+			message VARCHAR(1000)
 		)"
 	);
 
