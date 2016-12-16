@@ -167,32 +167,35 @@
                             <?php
                                 $ConexMessage = $Conexion->query("SELECT * FROM sus_message WHERE favorite='1' ORDER BY id DESC LIMIT 4;");
 
-                                while ($CM = $ConexMessage->fetch_array(MYSQLI_ASSOC)){
-                                    $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$CM['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
-                                    
-                                    ?>
-                                        <a href="#" onclick="LoadMessage(<?php echo $CM['id']; ?>);">
-                                            <li>
-                                                <img src="<?php echo "../".$GetImgArt['folder'].$GetImgArt['src']; ?>" width="60px" height="60px" class="profile-img pull-left">
-                                           
-                                                <div class="message-block">
-                                                    <div><span class="username"><?php echo $CM['fullname']; ?></span> <span class="message-datetime"><?php echo nicetime(date("Y-m-d H:i", $CM['date_log_unix'])); ?></span>
+                                if ($ConexMessage->num_rows > 0){
+                                    while ($CM = $ConexMessage->fetch_array(MYSQLI_ASSOC)){
+                                        $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$CM['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
+                                        
+                                        ?>
+                                            <a href="#" onclick="LoadMessage(<?php echo $CM['id']; ?>);">
+                                                <li>
+                                                    <img src="<?php echo "../".$GetImgArt['folder'].$GetImgArt['src']; ?>" width="60px" height="60px" class="profile-img pull-left">
+                                               
+                                                    <div class="message-block">
+                                                        <div><span class="username"><?php echo $CM['fullname']; ?></span> <span class="message-datetime"><?php echo nicetime(date("Y-m-d H:i", $CM['date_log_unix'])); ?></span>
+                                                        </div>
+                                                        <div class="message">
+                                                            <?php 
+                                                                echo substr($CM['message'], 0, 260); 
+    
+                                                                if (strlen($CM['message']) > 260){
+                                                                    echo "...";
+                                                                }
+                                                            ?>
+                                                        </div>
                                                     </div>
-                                                    <div class="message">
-                                                        <?php 
-                                                            echo substr($CM['message'], 0, 260); 
-
-                                                            if (strlen($CM['message']) > 260){
-                                                                echo "...";
-                                                            }
-                                                        ?>
-                                                    </div>
-                                                </div>
-
-                                            </li>
-                                        </a>
-                                    <?php
+    
+                                                </li>
+                                            </a>
+                                        <?php
+                                    }
                                 }
+
                             ?>
 
                             <form id="SendIdMessage">

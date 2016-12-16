@@ -106,3 +106,16 @@
 [06-Dec-2016 04:40:18 UTC] PHP Stack trace:
 [06-Dec-2016 04:40:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:0
 [06-Dec-2016 04:40:18 UTC] PHP   2. include() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:17
+[16-Dec-2016 16:54:21 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/ubuntu/workspace/RealEstate/Desktop/html/build/content.php on line 170
+[16-Dec-2016 16:54:21 UTC] PHP Stack trace:
+[16-Dec-2016 16:54:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:0
+[16-Dec-2016 16:54:21 UTC] PHP   2. include() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:21
+[16-Dec-2016 16:57:38 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/ubuntu/workspace/RealEstate/Desktop/html/build/content.php on line 170
+[16-Dec-2016 16:57:38 UTC] PHP Stack trace:
+[16-Dec-2016 16:57:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:0
+[16-Dec-2016 16:57:38 UTC] PHP   2. include() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:21
+[16-Dec-2016 17:12:07 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/ubuntu/workspace/RealEstate/Desktop/html/build/modals.php on line 1124
+[16-Dec-2016 17:12:07 UTC] PHP Stack trace:
+[16-Dec-2016 17:12:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:0
+[16-Dec-2016 17:12:07 UTC] PHP   2. include() /home/ubuntu/workspace/RealEstate/Desktop/html/index.php:21
+[16-Dec-2016 17:12:07 UTC] PHP   3. include() /home/ubuntu/workspace/RealEstate/Desktop/html/build/content.php:214
