@@ -47,10 +47,18 @@
 
     <div class="col-lg-3 col-sm-3">
       <h4>Síguenos en</h4>
-      <a href="<?php echo $fb; ?>"><img src="images/facebook.png" alt="facebook"></a>
-      <a href="<?php echo $tt; ?>"><img src="images/twitter.png" alt="twitter"></a>
-      <a href="<?php echo $gp; ?>"><img src="images/linkedin.png" alt="linkedin"></a>
-      <a href="<?php echo $li; ?>"><img src="images/instagram.png" alt="instagram"></a>
+      <a href="<?php echo $fb; ?>" style="margin:5px;" title="Perfil de Facebook" >
+        <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+      </a>
+      <a href="<?php echo $tt; ?>" style="margin:5px;" title="Perfil de Twitter" >
+        <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+      </a>
+      <a href="<?php echo $gp; ?>" style="margin:5px;" title="Perfil de Google Plus" >
+        <i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
+      </a>
+      <a href="<?php echo $li; ?>" style="margin:5px;" title="Perfil de LinkedLn" >
+        <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+      </a>
     </div>
 
     <div class="col-lg-3 col-sm-3">

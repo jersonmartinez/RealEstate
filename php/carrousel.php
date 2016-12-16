@@ -4,7 +4,7 @@
     <div id="owl-example" class="owl-carousel">
 
       <?php
-        $Qus = $Conexion->query("SELECT * FROM article ORDER BY price DESC LIMIT 15;");
+        $Qus = $Conexion->query("SELECT * FROM article ORDER BY price DESC LIMIT 20;");
         if ($Qus->num_rows > 0){
           while ($Qu = $Qus->fetch_array(MYSQLI_ASSOC)){
               ?>

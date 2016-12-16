@@ -22,7 +22,7 @@
       <div id="myCarousel" class="carousel slide">
         <ol class="carousel-indicators">
           <?php
-            $DataArticle = $Conexion->query("SELECT * FROM article;");
+            $DataArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC;");
             $regres_count = $DataArticle->num_rows;
             if ($DataArticle->num_rows > 10){
               for ($x = 0; $x < 10; $x++){

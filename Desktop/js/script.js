@@ -901,3 +901,18 @@ function GetMessageAnswer(){
 function CallModalMessage(){
 	$(".ShowMSGSended").click();
 }
+
+function UpdateFavoriteMessage(){
+	$.ajax({
+	    url: "build/UpdateFavoriteMessage.php",
+	    type: "POST",
+	    data: $("#ChangeIconFavoriteForm").serialize(),
+	    success: function(data){
+	    	$(".ChangeIconFavorite").html(data);	
+	    }
+  	});
+}
+
+function CallModalMessageFav(){
+	$(".ShowMSGSendedFav").click();
+}

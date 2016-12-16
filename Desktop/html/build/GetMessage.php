@@ -62,7 +62,31 @@
                 <form id="SendAnswerMessage">
                     <input type="hidden" name="id_sms" value="<?php echo $ThisMessage['id']; ?>" />
                     <textarea name="answer_message" id="answer_message" placeholder="Agregar respuesta..."></textarea><br/>
+                    <div class="ChangeIconFavorite">
+
+                        <?php
+                            $QFav = $Conexion->query("SELECT favorite FROM sus_message WHERE id='".$ThisMessage['id']."';");
+
+                            if ($QFav->num_rows > 0){
+                                $QFavAct = $QFav->fetch_array(MYSQLI_ASSOC);
+                                if ($QFavAct['favorite'] == "0" || $QFavAct['favorite'] == ""){
+                                    ?>
+                                        <i class="fa fa-star-half-o fa-lg" onclick="javascript: UpdateFavoriteMessage();" title="Agregar a favoritos" aria-hidden="true" style="float: left; cursor: pointer;"></i>
+                                    <?php
+                                } else {
+                                     ?>
+                                        <i class="fa fa-star fa-lg" onclick="javascript: UpdateFavoriteMessage();" title="Agregado como favorito" aria-hidden="true" style="float: left; cursor: pointer;"></i>
+                                    <?php
+                                }
+                            }
+                        ?>
+
+                    </div>
                     <button type="button" class="btn btn-primary" onclick="SendMessageAnswer();" >Enviar mensaje</button>
+                </form>
+
+                <form id="ChangeIconFavoriteForm">
+                    <input type="hidden" name="ChangeIconFavId" value="<?php echo $ThisMessage['id']; ?>" />
                 </form>
             </div>  
 
