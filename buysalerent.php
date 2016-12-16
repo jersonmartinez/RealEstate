@@ -74,7 +74,13 @@
 <div class="row">
     
     <?php
-      $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC;");
+      if (isset($_GET['pagina'])){
+        $num_page = $_GET['pagina'];
+        $quantity = 9;
+        $quantData = ceil($Conexion->query("SELECT * FROM article;")->num_rows / $quantity);
+        $start = ($num_page > 1) ? ($num_page * $quantity) - $quantity : 0;
+      }
+      $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC LIMIT $start, $quantity;");
 
       while ($GA = $GetArticle->fetch_array(MYSQLI_ASSOC)){
         $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$GA['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
@@ -113,18 +119,8 @@
       }
     ?>
 
+      <?php include ("paginacion.php"); ?>
 
-      <div class="center">
-        <ul class="pagination">
-          <li><a href="#">«</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">»</a></li>
-        </ul>
-      </div>
 </div>
 </div>
 </div>
