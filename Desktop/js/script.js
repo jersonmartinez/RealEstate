@@ -859,6 +859,7 @@ function LoadMessage(id_art){
 	    		$(".ShowMessageBox").html(data);
 	    		$(".OpenMessage").click();
 	    		GetMessageAnswer();
+	    		$(".close_modal_now").click();
 	    	}
 	    }
   	});
@@ -895,4 +896,8 @@ function GetMessageAnswer(){
 	    	$(".WriteMessagesAnswer").html(data);	
 	    }
   	});
+}
+
+function CallModalMessage(){
+	$(".ShowMSGSended").click();
 }

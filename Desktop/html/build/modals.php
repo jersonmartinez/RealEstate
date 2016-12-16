@@ -1044,3 +1044,64 @@
         </div>
     </div>
 </div>
+
+<!-- Muestra todos los mensajes que han sido enviados. -->
+<input type="hidden" class="ShowMSGSended" data-toggle="modal" data-target="#ShowMSGSended"  />
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="ShowMSGSended" tabindex="1" role="dialog" aria-labelledby="ShowMSGSendedItem" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="card-body no-padding">
+                <ul class="message-list">
+
+                    <?php
+                        //include ("build/CalcDate.php");
+                        $ConexM = $Conexion->query("SELECT * FROM sus_message ORDER BY id DESC;");
+
+                        while ($CoM = $ConexM->fetch_array(MYSQLI_ASSOC)){
+                            $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$CoM['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
+                            ?>
+                                <a href="#" onclick="LoadMessage(<?php echo $CoM['id']; ?>);">
+                                    <li>
+                                        <img src="<?php echo "../".$GetImgArt['folder'].$GetImgArt['src']; ?>" width="60px" height="60px" class="profile-img pull-left">
+                                   
+                                        <div class="message-block">
+                                            <div><span class="username"><?php echo $CoM['fullname']; ?></span> <span class="message-datetime"><?php echo nicetime(date("Y-m-d H:i", $CoM['date_log_unix'])); ?></span>
+                                            </div>
+                                            <div class="message">
+                                                <?php 
+                                                    echo substr($CoM['message'], 0, 260); 
+
+                                                    if (strlen($CoM['message']) > 260){
+                                                        echo "...";
+                                                    }
+                                                ?>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </a>
+                            <?php
+                        }
+                    ?>
+
+                    <form id="SendIdMessage">
+                        <input type="hidden" id="IdMessage" name="IdMessage" value="" />
+                    </form>
+
+                    <!-- <a href="#" id="message-load-more">
+                        <li class="text-center load-more">
+                            <i class="fa fa-refresh"></i> Cargar más...
+                        </li>
+                    </a> -->
+                </ul>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary close_modal_now" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

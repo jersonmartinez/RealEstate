@@ -144,7 +144,7 @@
                                 <input type="hidden" id="IdMessage" name="IdMessage" value="" />
                             </form>
 
-                            <a href="#" id="message-load-more">
+                            <a href="#" id="message-load-more" onclick="javascript: CallModalMessage();">
                                 <li class="text-center load-more">
                                     <i class="fa fa-refresh"></i> Cargar más...
                                 </li>
