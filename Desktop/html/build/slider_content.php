@@ -29,8 +29,8 @@
                                  <div class="col-sm-12 col-xs-12">
                                     <div class="card card-success">
                                         <div class="card-header">
-                                            <div class="card-title" style="width: 100%;">
-                                                <div class="title"><i class="fa fa-certificate"></i> <?php echo $RowArtTitle['title']; ?><i class="fa fa-check-circle-o fa-2x" style="float: right;"></i></div>
+                                            <div class="card-title checked_slider" style="width: 100%;">
+                                                <div class="title"><i class="fa fa-certificate"></i> <?php echo $RowArtTitle['title']; ?><i class="fa fa-check-circle-o fa-2x" style="float: right; cursor: pointer;"></i></div>
                                             </div>
                                             <div class="clear-both">
                                                 
@@ -45,6 +45,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <form id="FormAddSlider<?php echo $RowArtTitle['id_art']; ?>"></form>
                             <?php
                         }
                     ?>
@@ -64,8 +66,8 @@
                                     <div class="col-sm-12 col-xs-12">
                                         <div class="card card-success">
                                             <div class="card-header">
-                                                <div class="card-title" style="width: 100%;">
-                                                    <div class="title"><i class="fa fa-certificate"></i> <?php echo $RowArtTitleTwo['title']; ?><i class="fa fa-check-circle fa-2x" style="float: right;"></i></div>
+                                                <div class="card-title checked_slider" style="width: 100%;">
+                                                    <div class="title"><i class="fa fa-certificate"></i> <?php echo $RowArtTitleTwo['title']; ?><i class="fa fa-check-circle fa-2x" style="float: right; cursor: pointer;"></i></div>
                                                 </div>
                                                 <div class="clear-both"></div>
                                             </div>
@@ -87,9 +89,6 @@
 
                 </div>
             </div>
-
         </div>
-
-
     </div>
 </div>

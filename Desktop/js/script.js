@@ -899,6 +899,12 @@ function GetMessageAnswer(){
 }
 
 function CallModalMessage(){
+	$.ajax({
+	    url: "build/view_all_messages.php",
+	    success: function(data){
+	    	$(".view_all_messages").html(data);	
+	    }
+  	});
 	$(".ShowMSGSended").click();
 }
 
@@ -914,5 +920,11 @@ function UpdateFavoriteMessage(){
 }
 
 function CallModalMessageFav(){
+	$.ajax({
+	    url: "build/view_all_messages_favorite.php",
+	    success: function(data){
+	    	$(".view_all_messages_favorite").html(data);	
+	    }
+  	});
 	$(".ShowMSGSendedFav").click();
 }

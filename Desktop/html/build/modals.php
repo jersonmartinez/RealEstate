@@ -1054,48 +1054,8 @@
         <div class="modal-content">
             
             <div class="card-body no-padding">
-                <ul class="message-list">
-
-                    <?php
-                        //include ("build/CalcDate.php");
-                        $ConexM = $Conexion->query("SELECT * FROM sus_message ORDER BY id DESC;");
-
-                        while ($CoM = $ConexM->fetch_array(MYSQLI_ASSOC)){
-                            $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$CoM['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
-                            ?>
-                                <a href="#" onclick="LoadMessage(<?php echo $CoM['id']; ?>);">
-                                    <li>
-                                        <img src="<?php echo "../".$GetImgArt['folder'].$GetImgArt['src']; ?>" width="60px" height="60px" class="profile-img pull-left">
-                                   
-                                        <div class="message-block">
-                                            <div><span class="username"><?php echo $CoM['fullname']; ?></span> <span class="message-datetime"><?php echo nicetime(date("Y-m-d H:i", $CoM['date_log_unix'])); ?></span>
-                                            </div>
-                                            <div class="message">
-                                                <?php 
-                                                    echo substr($CoM['message'], 0, 260); 
-
-                                                    if (strlen($CoM['message']) > 260){
-                                                        echo "...";
-                                                    }
-                                                ?>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                </a>
-                            <?php
-                        }
-                    ?>
-
-                    <form id="SendIdMessage">
-                        <input type="hidden" id="IdMessage" name="IdMessage" value="" />
-                    </form>
-
-                    <!-- <a href="#" id="message-load-more">
-                        <li class="text-center load-more">
-                            <i class="fa fa-refresh"></i> Cargar más...
-                        </li>
-                    </a> -->
+                <ul class="message-list view_all_messages">
+                    <!-- Here code sus_messages -->
                 </ul>
             </div>
 
@@ -1116,47 +1076,8 @@
         <div class="modal-content">
             
             <div class="card-body no-padding">
-                <ul class="message-list">
-
-                    <?php
-                        $ConexM = $Conexion->query("SELECT * FROM sus_message WHERE favorite='1' ORDER BY id DESC;");
-
-                        while ($CoM = $ConexM->fetch_array(MYSQLI_ASSOC)){
-                            $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$CoM['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
-                            ?>
-                                <a href="#" onclick="LoadMessage(<?php echo $CoM['id']; ?>);">
-                                    <li>
-                                        <img src="<?php echo "../".$GetImgArt['folder'].$GetImgArt['src']; ?>" width="60px" height="60px" class="profile-img pull-left">
-                                   
-                                        <div class="message-block">
-                                            <div><span class="username"><?php echo $CoM['fullname']; ?></span> <span class="message-datetime"><?php echo nicetime(date("Y-m-d H:i", $CoM['date_log_unix'])); ?></span>
-                                            </div>
-                                            <div class="message">
-                                                <?php 
-                                                    echo substr($CoM['message'], 0, 260); 
-
-                                                    if (strlen($CoM['message']) > 260){
-                                                        echo "...";
-                                                    }
-                                                ?>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                </a>
-                            <?php
-                        }
-                    ?>
-
-                    <form id="SendIdMessage">
-                        <input type="hidden" id="IdMessage" name="IdMessage" value="" />
-                    </form>
-
-                    <!-- <a href="#" id="message-load-more">
-                        <li class="text-center load-more">
-                            <i class="fa fa-refresh"></i> Cargar más...
-                        </li>
-                    </a> -->
+                <ul class="message-list view_all_messages_favorite">
+                    <!-- Here code sus_message_favorite -->
                 </ul>
             </div>
 
