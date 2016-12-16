@@ -2,7 +2,7 @@
         <h4>Propiedades calientes</h4>
         
         <?php
-          $HotProperties = $Conexion->query("SELECT * FROM article;");
+          $HotProperties = $Conexion->query("SELECT * FROM article ORDER BY price DESC LIMIT 9;");
           //$GetImgArticleHP = $Conexion->query("SELECT * FROM publish_img WHERE id_art='".$GIA['id_art']."';")->fetch_array(MYSQLI_ASSOC);
 
           while ($HP = $HotProperties->fetch_array(MYSQLI_ASSOC)){

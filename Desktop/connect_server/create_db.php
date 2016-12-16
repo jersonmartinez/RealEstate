@@ -136,7 +136,8 @@
 			username VARCHAR(50) NOT NULL, 
 			message VARCHAR(1000) NOT NULL, 
 			id_msg INT UNSIGNED NOT NULL, 
-			date_time_unix VARCHAR(30) NOT NULL
+			date_time_unix VARCHAR(30) NOT NULL, 
+			favorite INT
 		)"
 	);
 

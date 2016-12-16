@@ -859,6 +859,7 @@ function LoadMessage(id_art){
 	    		$(".ShowMessageBox").html(data);
 	    		$(".OpenMessage").click();
 	    		GetMessageAnswer();
+	    		$(".close_modal_now").click();
 	    	}
 	    }
   	});
@@ -895,4 +896,23 @@ function GetMessageAnswer(){
 	    	$(".WriteMessagesAnswer").html(data);	
 	    }
   	});
+}
+
+function CallModalMessage(){
+	$(".ShowMSGSended").click();
+}
+
+function UpdateFavoriteMessage(){
+	$.ajax({
+	    url: "build/UpdateFavoriteMessage.php",
+	    type: "POST",
+	    data: $("#ChangeIconFavoriteForm").serialize(),
+	    success: function(data){
+	    	$(".ChangeIconFavorite").html(data);	
+	    }
+  	});
+}
+
+function CallModalMessageFav(){
+	$(".ShowMSGSendedFav").click();
 }
