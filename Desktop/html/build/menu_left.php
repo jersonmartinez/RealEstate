@@ -68,6 +68,12 @@
                     </a>
                 </li>
 
+                <li class="config_slider">
+                    <a href="slider">
+                        <span class="icon fa fa-sliders"></span><span class="title">Configurar Slider</span>
+                    </a>
+                </li>
+
                  <li class="about_us__item">
                     <a href="about_us">
                         <span class="icon fa fa-pencil"></span><span class="title">Escribir sobre nosotros</span>

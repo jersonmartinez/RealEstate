@@ -7,9 +7,6 @@
         $('.carousel').carousel('cycle');
  }); 
 
-
-
-
   $(function() {
       
         var Page = (function() {

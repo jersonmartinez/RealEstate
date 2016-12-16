@@ -4,7 +4,7 @@
     <div class="sl-slider">
       <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
         <div class="sl-slide-inner">
-          <div class="bg-img bg-img-1"></div>
+          <div class="bg-img bg-img-10"></div>
           <h2><a href="#">2 Bed Rooms and 1 Dinning Room Aparment on Sale</a></h2>
           <blockquote>              
           <p class="location"><span class="glyphicon glyphicon-map-marker"></span> 1890 Syndey, Australia</p>
