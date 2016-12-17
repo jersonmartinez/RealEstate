@@ -11,7 +11,7 @@
     <div class="inside-banner">
       <div class="container"> 
         <span class="pull-right"><a href="./">Principal</a> / Acerca de</span>
-        <h2>About Us</h2>
+        <h2>Acerca de</h2>
       </div>
     </div>
 
