@@ -77,9 +77,13 @@
       if (isset($_GET['pagina'])){
         $num_page = $_GET['pagina'];
         $quantity = 9;
-        $quantData = ceil($Conexion->query("SELECT * FROM article;")->num_rows / $quantity);
         $start = ($num_page > 1) ? ($num_page * $quantity) - $quantity : 0;
+      } else {
+        $num_page = 1;
+        $start = 0;
+        $quantity = 9;
       }
+        $quantData = ceil($Conexion->query("SELECT * FROM article;")->num_rows / $quantity);
       $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC LIMIT $start, $quantity;");
 
       while ($GA = $GetArticle->fetch_array(MYSQLI_ASSOC)){
