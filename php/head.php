@@ -36,7 +36,7 @@
         return @$_SERVER['REMOTE_ADDR'];
     }
 
-   	$Conexion->query("INSERT INTO count_visit (id, ip) VALUES ('','".getIpAddr()."');");
+   	@$Conexion->query("INSERT INTO count_visit (id, ip) VALUES ('','".getIpAddr()."');");
 ?>
 
 <!-- <script src="slider/sliderengine/jquery.js"></script> -->

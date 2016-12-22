@@ -174,7 +174,7 @@
             <p class="price">
               $
               <?php
-                echo $GIA['price'];
+                echo number_format($GIA['price'], 2, '.', ',');
               ?>
             </p>
             <p class="area"><span class="glyphicon glyphicon-map-marker"></span>Localidad <p><?php echo $GIA['department'].", ".$GIA['city']." : ".$GIA['local_address']; ?></p>
