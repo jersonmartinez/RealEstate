@@ -2,10 +2,11 @@
 	include ("connect_server.php");
 
 	$tables = array('admin_info' => "CREATE TABLE admin_info (
-			username VARCHAR(50) NOT NULL PRIMARY KEY, 
+			username VARCHAR(50) NOT NULL, 
 			date_log DATE NOT NULL, 
 			date_log_unix VARCHAR(100) NOT NULL, 
 			email VARCHAR(100) NOT NULL,
+			PRIMARY KEY (username)
 		)", 
 		'user_admin' => "CREATE TABLE user_admin (
 			username VARCHAR(50) NOT NULL, 
@@ -137,7 +138,7 @@
 			id_msg INT UNSIGNED NOT NULL, 
 			date_time_unix VARCHAR(30) NOT NULL, 
 			favorite INT
-		)",
+		)", 
 		'simple_contact' => "CREATE TABLE simple_contact (
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
 			fullname VARCHAR(50) NOT NULL, 
