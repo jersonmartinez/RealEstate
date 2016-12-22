@@ -16,4 +16,4 @@
 <a href="javascript: cargarmap1();">Iniciar mapa</a>
 
 <!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&language=es"></script> -->
-<script src="http://maps.google.com/maps/api/js?sensor=false&callback=cargarmap1"></script>
+<script src="https://maps.google.com/maps/api/js?sensor=false&callback=cargarmap1"></script>
