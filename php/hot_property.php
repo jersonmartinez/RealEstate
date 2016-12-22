@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-lg-8 col-sm-7">
                   <h5><a href="property-detail.php?id_art=<?php echo $HP['id_art']; ?>"><?php echo $HP['title']; ?></a></h5>
-                  <p class="price">$<?php echo $HP['price']; ?></p>
+                  <p class="price">$<?php echo number_format($HP['price'], 2, '.', ','); ?></p>
                 </div>
               </div>
             <?php
