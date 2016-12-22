@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
     <?php include ("php/head.php"); ?>
   </head>

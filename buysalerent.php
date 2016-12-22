@@ -124,7 +124,7 @@
                     ?>
                   </a>
                 </h4>
-                <p class="price">Precio: $<?php echo $GA['price']; ?></p>
+                <p class="price">Precio: $<?php echo number_format($GA['price'], 2, '.', ','); ?></p>
                 
                 <div class="listing-detail">
                   <span data-toggle="tooltip" data-placement="bottom" data-original-title="Habitaciones"><?php echo $GA['bed_room']; ?></span> 
