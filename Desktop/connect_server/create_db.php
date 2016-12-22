@@ -69,7 +69,8 @@
 			id_img INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 			folder VARCHAR(300) NOT NULL,
 			src VARCHAR(300) UNIQUE NOT NULL,
-			date_log DATETIME NOT NULL,
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			date_log DATETIME NOT NULL DEFAULT NOW(),
 			date_log_unix VARCHAR(50) NOT NULL,
 			id_art INT UNSIGNED NOT NULL,
 			FOREIGN KEY (id_art) REFERENCES article(id_art) ON UPDATE CASCADE ON DELETE CASCADE
@@ -78,13 +79,15 @@
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
 			folder VARCHAR(300) NOT NULL, 
 			src VARCHAR(300) UNIQUE NOT NULL, 
-			created_at DATETIME NOT NULL
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			created_at DATETIME NOT NULL DEFAULT NOW()
 		)", 
 		'img_perfil' => "CREATE TABLE img_perfil (
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
 			folder VARCHAR(300) NOT NULL, 
 			src VARCHAR(300) UNIQUE NOT NULL, 
-			created_at DATETIME NOT NULL, 
+			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
+			created_at DATETIME NOT NULL DEFAULT NOW(), 
 			username VARCHAR(50) NOT NULL, 
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)",
