@@ -85,6 +85,6 @@ function toggleBounce() {
 // Carga de la libreria de google maps 
 
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyA_OJ9Y274q4iC6QBxcX_MAferoYTfZC_w&callback=initMap"></script>
   </body>
 </html>
