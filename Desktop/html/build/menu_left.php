@@ -68,11 +68,11 @@
                     </a>
                 </li>
 
-                <li class="config_slider">
+               <!--  <li class="config_slider">
                     <a href="slider">
                         <span class="icon fa fa-sliders"></span><span class="title">Configurar Slider</span>
                     </a>
-                </li>
+                </li> -->
 
                  <li class="about_us__item">
                     <a href="about_us">

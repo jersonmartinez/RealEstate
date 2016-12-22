@@ -116,3 +116,7 @@ $("#email_suscription_").keypress(function(event){
     $("#notifynowemail").click();
   }
 });
+
+function Login(){
+  $("#button_modal_click").click();
+}

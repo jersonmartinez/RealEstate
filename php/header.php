@@ -17,10 +17,11 @@
            <li class="active"><a href="./">Principal</a></li>
             <li><a href="about">Acerca de</a></li>
             <li><a href="agents">Agentes</a></li>
-            <li><a href="blog">Blog</a></li>
+            <!-- <li><a href="blog">Blog</a></li> -->
             <li><a href="contact">Contacto</a></li>
+             <li><a href="#" onclick="Login();">Iniciar sesión</a></li>
 
-            <div class="btn-group">
+            <!-- <div class="btn-group">
               <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-placement="left" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
                 <i class="fa fa-globe" aria-hidden="true"></i>Idioma
               </button>
@@ -35,7 +36,7 @@
                 <li class="divider"></li>
                 <li><a href="#">Español</a></li>
               </ul>
-            </div>
+            </div> -->
           </ul>
 
         </div>
@@ -50,8 +51,8 @@
   <div class="header">
   <a href="./"><img src="images/logofinal.png" alt="Realestate"></a>
       <ul class="pull-right">
-        <li><a href="buysalerent">Ventas</a></li>         
-        <li><a href="buysalerent">Alquilar</a></li>
+        <li><a href="buysalerent?type_business=Venta">Ventas</a></li>         
+        <li><a href="buysalerent?type_business=Alquiler">Alquiler</a></li>
       </ul>
   </div>
 <!-- #Header Starts -->

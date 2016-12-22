@@ -69,7 +69,7 @@
 
 <div class="col-lg-9 col-sm-8">
   <div class="sortby clearfix">
-    <div class="pull-left result">Mostrando: <?php echo $quantity; ?> de <?php echo $Conexion->query("SELECT * FROM article;")->num_rows; ?> </div>
+    <!-- <div class="pull-left result">Mostrando: <?php echo $quantity; ?> de <?php echo $Conexion->query("SELECT * FROM article;")->num_rows; ?> </div> -->
       <div class="pull-right">
       <select class="form-control">
       <option>Ordernar por</option>
@@ -80,7 +80,6 @@
 <div class="row">
     
     <?php
-
 
       if (isset($_GET['pagina'])){
         $num_page = $_GET['pagina'];
@@ -93,12 +92,14 @@
       $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC LIMIT $start, $quantity;");
       
       if (isset($_GET['search'])){
-        $search = $_GET['search'];
-        $business_type = $_GET['business_type'];
-        $price = $_GET['price'];
-        $property_type = $_GET['property_type'];
+        @$search = $_GET['search'];
+        @$business_type = $_GET['business_type'];
+        @$price = $_GET['price'];
+        @$property_type = $_GET['property_type'];
 
-        $GetArticle = $Conexion->query("SELECT * FROM article WHERE title LIKE %$search% and business_type LIKE %$business_type% and price >= $price and property_type LIKE %$property_type%;");
+        $GetArticle = $Conexion->query("SELECT * FROM article WHERE title LIKE %$search% and business_type LIKE %$business_type% and price LIKE %$price% and property_type LIKE %$property_type%;");
+      } else if (isset($_GET['type_business'])){
+        $GetArticle = $Conexion->query("SELECT * FROM article WHERE business_type='".$_GET['type_business']."' ORDER BY id_art DESC LIMIT $start, $quantity;");
       }
 
       if (@$GetArticle->num_rows > 0){
