@@ -92,4 +92,4 @@
           
         </div>
 
-    <script src="https://maps.google.com/maps/api/js?sensor=false&callback=LoadMap"></script>
+    <script src="https://maps.google.com/maps/api/js?key= AIzaSyA_OJ9Y274q4iC6QBxcX_MAferoYTfZC_w&sensor=false&callback=LoadMap"></script>
