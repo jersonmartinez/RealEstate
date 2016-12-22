@@ -129,7 +129,8 @@
 			message VARCHAR(5000) NOT NULL, 
 			id_art INT UNSIGNED NOT NULL, 
 			date_log_unix VARCHAR(30) NOT NULL, 
-			title_art VARCHAR(1000) NOT NULL
+			title_art VARCHAR(1000) NOT NULL,
+			favorite INT
 		)", 
 		'answer_message' => "CREATE TABLE answer_message (
 			id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
