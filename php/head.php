@@ -1,5 +1,5 @@
 <?php include ("Desktop/connect_server/connect_server.php"); ?>
-<title>Belly Bienes Raíces</title>
+<title>Belly Real Estate</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
