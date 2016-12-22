@@ -67,7 +67,7 @@
                         <?php
                             $QFav = $Conexion->query("SELECT favorite FROM sus_message WHERE id='".$ThisMessage['id']."';");
 
-                            if (@$QFav->num_rows > 0){
+                            if ($QFav->num_rows > 0){
                                 $QFavAct = $QFav->fetch_array(MYSQLI_ASSOC);
                                 if ($QFavAct['favorite'] == "0" || $QFavAct['favorite'] == ""){
                                     ?>
