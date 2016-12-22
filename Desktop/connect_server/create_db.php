@@ -24,7 +24,6 @@
 			description VARCHAR(1000), 
 			folder VARCHAR(300),
 			src VARCHAR(500),
-			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
 			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL,
@@ -56,13 +55,12 @@
 			longitude VARCHAR(50), 
 			latitude VARCHAR(50), 
 	
-			#-- Tenía un DEFAULT NOW() Problema en c9.io -- 
 			date_log DATETIME NOT NULL,
 			date_log_unix VARCHAR(50) NOT NULL,
 			username VARCHAR(50) NOT NULL, 
 
 			#Hay que prestar atención a esta línea.
-			FOREIGN KEY (id_agent) REFERENCES agents(id_agent) ON UPDATE CASCADE ON DELETE CASCADE,
+			#FOREIGN KEY (id_agent) REFERENCES agents(id_agent) ON UPDATE CASCADE ON DELETE CASCADE,
 			FOREIGN KEY (username) REFERENCES admin_info(username) ON UPDATE CASCADE ON DELETE CASCADE
 		)", 
 		'publish_img' => "CREATE TABLE publish_img (
