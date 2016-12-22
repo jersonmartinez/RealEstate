@@ -5,7 +5,8 @@
 		}
 	}
 
-	@$Conexion = new TheCodeBrain("127.0.0.1", "SideMaster", "Inform@tico", "re");
+	@$Conexion = new TheCodeBrain("mysql.hostinger.es", "u141201621_sm", "Windows10", "u141201621_re");
+	// @$Conexion = new TheCodeBrain("127.0.0.1", "SideMaster", "Inform@tico", "re");
 
 	if ($Conexion->connect_error)
 		$error = true;
