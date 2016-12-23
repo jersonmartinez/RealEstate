@@ -17,23 +17,23 @@
 	$mail->isSMTP();                                      // Set mailer to use SMTP
 	$mail->Host = 'mx1.hostinger.es';  // Specify main and backup SMTP servers
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = $KnowEmailMSG['email'];                 // SMTP username
+	$mail->Username = $KnowEmailAdmin['email'];                 // SMTP username
 	$mail->Password = 'Windows10';                           // SMTP password
 	$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 587;                                 // TCP port to connect to
 
-	echo "The data is: ".$KnowEmailMSG['email']." and whoami: ".$KnowEmailMSG['whoami'];
+	//echo "The data is: ".$KnowEmailMSG['email']." and whoami: ".$KnowEmailMSG['whoami'];
 
 	//From email address and name
 	$mail->From = $email;
 	$mail->FromName = $fullname;
 
 	//To address and name
-	$mail->addAddress($KnowEmailMSG['email'], $KnowEmailMSG['whoami']);
+	$mail->addAddress($KnowEmailAdmin['email'], $KnowEmailAdmin['whoami']);
 	// $mail->addAddress("jersonmartinezsm@gmail.com"); //Recipient name is optional
 
 	//Address to which recipient will reply, aquí debería ir el del cliente suscrito.
-	$mail->addReplyTo($KnowEmailMSG['email'], "Responder");
+	$mail->addReplyTo($KnowEmailAdmin['email'], "Responder");
 
 	//CC and BCC optional.
 	// $mail->addCC("cc@example.com");
