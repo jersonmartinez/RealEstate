@@ -9,19 +9,29 @@
 	$message 		= $_POST['sus_message'];
 	$title_art 		= $_POST['sus_article'];
 
+	$KnowEmailAdmin = $Conexion->query("SELECT email, whoami FROM contact_us ORDER BY id DESC LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
+
 	//PHPMailer Object
 	$mail = new PHPMailer;
+
+	$mail->isSMTP();                                      // Set mailer to use SMTP
+	$mail->Host = 'mx1.hostinger.es';  // Specify main and backup SMTP servers
+	$mail->SMTPAuth = true;                               // Enable SMTP authentication
+	$mail->Username = $KnowEmailMSG['email'];                 // SMTP username
+	$mail->Password = 'Windows10';                           // SMTP password
+	$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+	$mail->Port = 587;                                 // TCP port to connect to
 
 	//From email address and name
 	$mail->From = $email;
 	$mail->FromName = $fullname;
 
 	//To address and name
-	$mail->addAddress("jersonmartinezsm@gmail.com", "Jerson Martínez");
+	$mail->addAddress($KnowEmailMSG['email'], $KnowEmailMSG['whoami']);
 	// $mail->addAddress("jersonmartinezsm@gmail.com"); //Recipient name is optional
 
 	//Address to which recipient will reply, aquí debería ir el del cliente suscrito.
-	$mail->addReplyTo("sidemasterdelfuturo@gmail.com", "Responder");
+	$mail->addReplyTo($KnowEmailMSG['email'], "Responder");
 
 	//CC and BCC optional.
 	// $mail->addCC("cc@example.com");
