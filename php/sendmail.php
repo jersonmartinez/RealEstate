@@ -22,7 +22,7 @@
 	$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 587;                                 // TCP port to connect to
 
-	echo "The data is: ".$KnowEmailMSG['email'];
+	echo "The data is: ".$KnowEmailMSG['email']." and whoami: ".$KnowEmailMSG['whoami'];
 
 	//From email address and name
 	$mail->From = $email;
