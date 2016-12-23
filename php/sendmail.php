@@ -24,23 +24,10 @@
 
 	//echo "The data is: ".$KnowEmailMSG['email']." and whoami: ".$KnowEmailMSG['whoami'];
 
-	//From email address and name
-	$mail->From = $email;
-	$mail->FromName = $fullname;
-
-	//To address and name
-	$mail->addAddress($KnowEmailAdmin['email'], $KnowEmailAdmin['whoami']);
-	// $mail->addAddress("jersonmartinezsm@gmail.com"); //Recipient name is optional
-
-	//Address to which recipient will reply, aquí debería ir el del cliente suscrito.
-	$mail->addReplyTo($email, "Responder");
-
-	//CC and BCC optional.
-	// $mail->addCC("cc@example.com");
-	// $mail->addBCC("bcc@example.com");
-
-	//Send HTML or Plain Text email
-	$mail->isHTML(true);
+	$mail->setFrom($email, $fullname);
+	$mail->addAddress($KnowEmailAdmin['email'], $KnowEmailAdmin['whoami']);     // Add a recipient
+	$mail->addReplyTo('sidemasterdelfuturo@gmail.com', 'Information');
+	
 
 	$mail->Subject = $title_art;
 	$mail->Body = $message;
