@@ -33,7 +33,7 @@
 	// $mail->addAddress("jersonmartinezsm@gmail.com"); //Recipient name is optional
 
 	//Address to which recipient will reply, aquí debería ir el del cliente suscrito.
-	$mail->addReplyTo($KnowEmailAdmin['email'], "Responder");
+	$mail->addReplyTo($email, "Responder");
 
 	//CC and BCC optional.
 	// $mail->addCC("cc@example.com");
