@@ -120,3 +120,29 @@ $("#email_suscription_").keypress(function(event){
 function Login(){
   $("#button_modal_click").click();
 }
+
+function ASCtoDESC(){
+  var url_string = window.location.href;
+  var final_url;
+
+  if (url_string.indexOf('?') < 0){
+    final_url = url_string.concat("?order=ASC");
+  } else {
+    final_url = url_string.concat("&order=ASC");
+  }
+
+  window.location.href = final_url;
+}
+
+function DESCtoASC(){
+  var url_string = window.location.href;
+  var final_url;
+
+  if (url_string.indexOf('?') < 0){
+    final_url = url_string.concat("?order=DESC");
+  } else {
+    final_url = url_string.concat("&order=DESC");
+  }
+
+  window.location.href = final_url;
+}
