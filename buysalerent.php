@@ -27,12 +27,12 @@
       <div class="row">
         <div class="col-lg-5">
           <select name="business_type" class="form-control">
-            <option>Alquiler</option>
-            <option>Venta</option>
+            <option onclick="chg_alquiler();">Alquiler</option>
+            <option onclick="chg_venta();">Venta</option>
           </select>
         </div>
         <div class="col-lg-7">
-          <select name="price" class="form-control">
+          <select name="price" class="form-control price_change">
             <option>Precio</option>
             <option value="150000">$150,000 - $200,000</option>
             <option value="200000">$200,000 - $250,000</option>

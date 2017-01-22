@@ -146,3 +146,11 @@ function DESCtoASC(){
 
   window.location.href = final_url;
 }
+
+function chg_alquiler(){
+  $(".price_change").html("<option>Precio</option><option value='100'>$100.00 - $200.00</option><option value='200'>$200.00 - $300.00</option><option value='300'>$300.00 - $400.00</option>");
+}
+
+function chg_venta(){
+  $(".price_change").html("<option>Precio</option><option value='150000'>$150,000 - $200,000</option><option value='200000'>$200,000 - $250,000</option><option value='250000'>$200,000 - $300,000</option><option value='300000'>$300,000 - Más</option>");
+}
