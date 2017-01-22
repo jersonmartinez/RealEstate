@@ -1,6 +1,7 @@
 <?php include ("Desktop/connect_server/connect_server.php"); ?>
 <title>Belly Real Estate</title>
 <meta charset="UTF-8" />
+<link rel="shortcut icon" type="image/png" href="images/icon.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
