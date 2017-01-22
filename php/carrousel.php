@@ -1,6 +1,6 @@
 <div class="container">
   <div class="properties-listing spacer"> <a href="buysalerent" class="pull-right viewall">Ver todo el listado</a>
-    <h2>Propiedades destacadas</h2>
+    <h2>Propiedades Premium</h2>
     <div id="owl-example" class="owl-carousel">
 
       <?php
