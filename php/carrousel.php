@@ -7,6 +7,7 @@
         $Qus = $Conexion->query("SELECT * FROM article ORDER BY price DESC LIMIT 20;");
         if ($Qus->num_rows > 0){
           while ($Qu = $Qus->fetch_array(MYSQLI_ASSOC)){
+            if ($Qu['property_state'] != "Vendido" && $Qu['property_state'] != "Alquilado"){
               ?>
               <div class="properties">
                 <?php
@@ -36,10 +37,13 @@
                 </h4>
                 <p class="price">Precio: $<?php echo number_format($Qu['price'], 2, '.', ','); ?></p>
                 
-                <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Habitaciones"><?php echo $Qu['bed_room']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $Qu['living_room']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Estacionamientos"><?php echo $Qu['parking']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $Qu['kitchen']; ?></span> </div>
+                <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Habitaciones"><?php echo $Qu['bed_room']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $Qu['living_room']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Garajes"><?php echo $Qu['parking']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $Qu['kitchen']; ?></span> </div>
                 <a class="btn btn-primary" href="property-detail.php?id_art=<?php echo $Qu['id_art']; ?>">Ver Detalles</a>
               </div>
             <?php
+            }
+
+              
           }
         }
       ?>

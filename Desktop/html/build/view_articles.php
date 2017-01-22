@@ -46,7 +46,7 @@
                                             <tr onclick="javascript: OnItemClickTrArticle(this);">
                                                 <td><?php echo $RArticle['id_art']; ?></td>
                                                 <td><?php echo $RArticle['title']; ?></td>
-                                                <td><?php echo $RArticle['price']; ?></td>
+                                                <td><?php echo number_format($RArticle['price'], 2, '.', ','); ?></td>
                                                 <td><?php echo $RArticle['city']; ?></td>
                                                 <?php
                                                     $RArt = $Conexion->query("SELECT names FROM agents WHERE id_agent='".$RArticle['id_agent']."';")->fetch_array(MYSQLI_ASSOC);

@@ -141,39 +141,42 @@
       
       if (@$GetArticle->num_rows > 0){
           while ($GA = $GetArticle->fetch_array(MYSQLI_ASSOC)){
-          $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$GA['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
-          ?>
-           <!-- properties -->
-            <div class="col-lg-4 col-sm-6">
-              <div class="properties">
-                <div class="image-holder">
-                  <img src="<?php echo "Desktop/".$GetImgArt['folder'].$GetImgArt['src']; ?>" class="img-responsive" alt="properties">
-                  <div class="status sold"><?php echo $GA['business_type']; ?></div>
-                </div>
+            if ($GA['property_state'] != "Vendido" && $GA['property_state'] != "Alquilado"){
+              $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$GA['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
+              ?>
+               <!-- properties -->
+                <div class="col-lg-4 col-sm-6">
+                  <div class="properties">
+                    <div class="image-holder">
+                      <img src="<?php echo "Desktop/".$GetImgArt['folder'].$GetImgArt['src']; ?>" class="img-responsive" alt="properties">
+                      <div class="status sold"><?php echo $GA['business_type']; ?></div>
+                    </div>
 
-                <h4>
-                  <a href="property-detail.php?id_art=<?php echo $GA['id_art']; ?>" title="<?php echo $GA['title']; ?>">
-                    <?php 
-                      echo substr($GA['title'],0,22); 
-                      if (strlen($GA['title']) > 22){
-                        echo "...";
-                      }
-                    ?>
-                  </a>
-                </h4>
-                <p class="price">Precio: $<?php echo number_format($GA['price'], 2, '.', ','); ?></p>
-                
-                <div class="listing-detail">
-                  <span data-toggle="tooltip" data-placement="bottom" data-original-title="Habitaciones"><?php echo $GA['bed_room']; ?></span> 
-                  <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $GA['living_room']; ?></span> 
-                  <span data-toggle="tooltip" data-placement="bottom" data-original-title="Estacionamientos"><?php echo $GA['parking']; ?></span> 
-                  <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $GA['kitchen']; ?></span> 
-                </div>
+                    <h4>
+                      <a href="property-detail.php?id_art=<?php echo $GA['id_art']; ?>" title="<?php echo $GA['title']; ?>">
+                        <?php 
+                          echo substr($GA['title'],0,22); 
+                          if (strlen($GA['title']) > 22){
+                            echo "...";
+                          }
+                        ?>
+                      </a>
+                    </h4>
+                    <p class="price">Precio: $<?php echo number_format($GA['price'], 2, '.', ','); ?></p>
+                    
+                    <div class="listing-detail">
+                      <span data-toggle="tooltip" data-placement="bottom" data-original-title="Habitaciones"><?php echo $GA['bed_room']; ?></span> 
+                      <span data-toggle="tooltip" data-placement="bottom" data-original-title="Salas"><?php echo $GA['living_room']; ?></span> 
+                      <span data-toggle="tooltip" data-placement="bottom" data-original-title="Garajes"><?php echo $GA['parking']; ?></span> 
+                      <span data-toggle="tooltip" data-placement="bottom" data-original-title="Cocinas"><?php echo $GA['kitchen']; ?></span> 
+                    </div>
 
-                <a class="btn btn-primary" href="property-detail.php?id_art=<?php echo $GA['id_art']; ?>">Ver detalles</a>
-              </div>
-            </div>
-          <?php
+                    <a class="btn btn-primary" href="property-detail.php?id_art=<?php echo $GA['id_art']; ?>">Ver detalles</a>
+                  </div>
+                </div>
+              <?php
+              
+            }
         }
       } else {
         echo "No hay resultados";
