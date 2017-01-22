@@ -34,10 +34,10 @@
         <div class="col-lg-7">
           <select name="price" class="form-control">
             <option>Precio</option>
-            <option value="200000">$150,000 - $200,000</option>
-            <option value="250000">$200,000 - $250,000</option>
-            <option value="300000">$250,000 - $300,000</option>
-            <option value="igual">$300,000 - above</option>
+            <option value="150000">$150,000 - $200,000</option>
+            <option value="200000">$200,000 - $250,000</option>
+            <option value="250000">$250,000 - $300,000</option>
+            <option value="300000">$300,000 - Más</option>
           </select>
         </div>
       </div>
@@ -64,44 +64,81 @@
       include ("php/hot_property.php"); 
       $quantity = 9;
       $quantData = ceil($Conexion->query("SELECT * FROM article;")->num_rows / $quantity);
+
+      if (isset($_GET['type_business'])){
+        $type_business = $_GET['type_business'];
+
+        $quantData = ceil($Conexion->query("SELECT * FROM article WHERE business_type='".$type_business."';")->num_rows / $quantity);
+
+      }
+
+      if (isset($_GET['search']) && isset($_GET['price']) && isset($_GET['business_type']) && isset($_GET['property_type'])){
+        $search         = $_GET['search'];
+        $price          = $_GET['price'];
+        $business_type  = $_GET['business_type'];
+        $property_type  = $_GET['property_type'];
+      
+        $quantData = ceil($Conexion->query("SELECT * FROM article WHERE title LIKE '%".$search."%' AND price >= ".$price." AND business_type='".$business_type."' AND property_type='".$property_type."';")->num_rows / $quantity);
+      }
+
     ?>
 </div>
 
 <div class="col-lg-9 col-sm-8">
   <div class="sortby clearfix">
-    <!-- <div class="pull-left result">Mostrando: <?php echo $quantity; ?> de <?php echo $Conexion->query("SELECT * FROM article;")->num_rows; ?> </div> -->
-      <div class="pull-right">
+    <div class="pull-right">
       <select class="form-control">
-      <option>Ordernar por</option>
-      <option>Precio: De bajo a alto</option>
-      <option>Precio: De alto a bajo</option>
-    </select></div>
+        <option>Ordernar por</option>
+        <option onclick="ASCtoDESC();">Precio: De bajo a alto</option>
+        <option onclick="DESCtoASC();">Precio: De alto a bajo</option>
+      </select>
     </div>
+  </div>
+
 <div class="row">
     
     <?php
 
-      if (isset($_GET['pagina'])){
-        $num_page = $_GET['pagina'];
-        $start = ($num_page > 1) ? ($num_page * $quantity) - $quantity : 0;
+      if (isset($_GET['page'])){
+          $num_page = $_GET['page'];
+          $start = ($num_page > 1) ? ($num_page * $quantity) - $quantity : 0;
+        } else {
+          $num_page = 1;
+          $start = 0;
+        }
+
+      if (isset($_GET['search']) && isset($_GET['price']) && isset($_GET['business_type']) && isset($_GET['property_type'])){
+        $search         = $_GET['search'];
+        $price          = $_GET['price'];
+        $business_type  = $_GET['business_type'];
+        $property_type  = $_GET['property_type'];
+        
+        $GetArticle = $Conexion->query("SELECT * FROM article WHERE title LIKE '%".$search."%' AND price >= ".$price." AND business_type='".$business_type."' AND property_type='".$property_type."' LIMIT $start, $quantity;");
+
       } else {
-        $num_page = 1;
-        $start = 0;
-      }
-      
-      $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC LIMIT $start, $quantity;");
-      
-      if (isset($_GET['search'])){
-        @$search = $_GET['search'];
-        @$business_type = $_GET['business_type'];
-        @$price = $_GET['price'];
-        @$property_type = $_GET['property_type'];
 
-        $GetArticle = $Conexion->query("SELECT * FROM article WHERE title LIKE %$search% and business_type LIKE %$business_type% and price LIKE %$price% and property_type LIKE %$property_type%;");
-      } else if (isset($_GET['type_business'])){
-        $GetArticle = $Conexion->query("SELECT * FROM article WHERE business_type='".$_GET['type_business']."' ORDER BY id_art DESC LIMIT $start, $quantity;");
-      }
+        $order = "";
 
+        if (isset($_GET['order'])){
+          $order = $_GET['order'];
+        }
+
+        if ($order == ""){
+          $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY id_art DESC LIMIT $start, $quantity;");
+        } else {
+          $GetArticle = $Conexion->query("SELECT * FROM article ORDER BY price ".$order." LIMIT $start, $quantity;");
+        }
+        
+        if (isset($type_business)){
+
+          if ($order == ""){
+            $GetArticle = $Conexion->query("SELECT * FROM article WHERE business_type='".$type_business."' ORDER BY id_art DESC LIMIT $start, $quantity;");
+          } else {
+            $GetArticle = $Conexion->query("SELECT * FROM article WHERE business_type='".$type_business."' ORDER BY price ".$order." LIMIT $start, $quantity;");
+          }
+        }
+      }      
+      
       if (@$GetArticle->num_rows > 0){
           while ($GA = $GetArticle->fetch_array(MYSQLI_ASSOC)){
           $GetImgArt = $Conexion->query("SELECT folder, src FROM publish_img WHERE id_art='".$GA['id_art']."' LIMIT 1;")->fetch_array(MYSQLI_ASSOC);
@@ -143,17 +180,15 @@
       }
     ?>
 
-      <?php include ("paginacion.php"); ?>
+    <?php include ("paginacion.php"); ?>
 
 </div>
 </div>
 </div>
 </div>
 </div>
-
     <div class="footer">
       <?php include ("php/footer.php"); ?>
     </div>
-
 </body>
 </html>
