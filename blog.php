@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from thebootstrapthemes.com/live/thebootstrapthemes-realestate/blog.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2015 21:39:40 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <title>Realestate Bootstrap Theme </title>
 <meta charset="UTF-8" />
@@ -14,14 +13,11 @@
 	<script src="assets/bootstrap/js/bootstrap.js"></script>
   <script src="assets/script.js"></script>
 
-
-
 <!-- Owl stylesheet -->
 <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
 <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
 <script src="assets/owl-carousel/owl.carousel.js"></script>
 <!-- Owl stylesheet -->
-
 
 <!-- slitslider -->
     <link rel="stylesheet" type="text/css" href="assets/slitslider/css/style.css" />
@@ -30,11 +26,9 @@
     <script type="text/javascript" src="assets/slitslider/js/jquery.ba-cond.min.js"></script>
     <script type="text/javascript" src="assets/slitslider/js/jquery.slitslider.js"></script>
 <!-- slitslider -->
-
-<script src='../../google_analytics_auto.js'></script></head>
+</head>
 
 <body>
-
 
 <!-- Header Starts -->
 <div class="navbar-wrapper">
@@ -42,8 +36,6 @@
         <div class="navbar-inverse" role="navigation">
           <div class="container">
             <div class="navbar-header">
-
-
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -52,8 +44,6 @@
               </button>
 
             </div>
-
-
             <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right">
@@ -72,21 +62,16 @@
     </div>
 <!-- #Header Starts -->
 
-
-
-
-
 <div class="container">
 
 <!-- Header Starts -->
 <div class="header">
 <a href="index.html"><img src="images/logo.png" alt="Realestate"></a>
-
-              <ul class="pull-right">
-                <li><a href="buysalerent.html">Buy</a></li>
-                <li><a href="buysalerent.html">Sale</a></li>         
-                <li><a href="buysalerent.html">Rent</a></li>
-              </ul>
+  <ul class="pull-right">
+    <li><a href="buysalerent.html">Buy</a></li>
+    <li><a href="buysalerent.html">Sale</a></li>         
+    <li><a href="buysalerent.html">Rent</a></li>
+  </ul>
 </div>
 <!-- #Header Starts -->
 </div><!-- banner -->

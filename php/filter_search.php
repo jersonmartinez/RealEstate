@@ -12,21 +12,20 @@
             <div class="col-lg-3 col-sm-3 ">
               <select name="business_type" class="form-control">
                 <!-- <option>Buy</option> -->
-                <option value="Alquiler">Alquiler</option>
-                <option value="Venta">Venta</option>
+                <option value="Alquiler" onclick="chg_alquiler();">Alquiler</option>
+                <option value="Venta" onclick="chg_venta();">Venta</option>
               </select>
             </div>
             <div class="col-lg-3 col-sm-4">
-              <select name="price" class="form-control">
+              <select name="price" class="form-control price_change">
                 <option>Precio</option>
-                <option value="150000">$150,000 - $200,000</option>
-                <option value="250000">$200,000 - $250,000</option>
-                <option value="300000">$250,000 - $300,000</option>
-                <option value="400000">$300,000 - above</option>
+                <option value="100">$100.00 - $200.00</option>
+                <option value="200">$200.00 - $300.00</option>
+                <option value="300">$300.00 - $400.00</option>
               </select>
             </div>
             <div class="col-lg-3 col-sm-4">
-            <select class="form-control">
+            <select name="property_type" class="form-control">
                 <?php
                   $ExOptionsProperty = $Conexion->query("SELECT * FROM property_type;");
                   while ($Nr = $ExOptionsProperty->fetch_array(MYSQLI_ASSOC)){
