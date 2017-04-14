@@ -36,7 +36,7 @@
             <option>Precio</option>
             <option value="100">$100.00 - $200.00</option>
             <option value="200">$200.00 - $300.00</option>
-            <option value="300">$300.00 - $400.00r</option>
+            <option value="300">$300.00 - $400.00</option>
           </select>
         </div>
       </div>
@@ -77,7 +77,7 @@
         $business_type  = $_GET['business_type'];
         $property_type  = $_GET['property_type'];
       
-        $quantData = ceil($Conexion->query("SELECT * FROM article WHERE title LIKE '%".$search."%' AND price >= ".$price." AND business_type='".$business_type."' AND property_type='".$property_type."';")->num_rows / $quantity);
+        @$quantData = @ceil($Conexion->query("SELECT * FROM article WHERE title LIKE '%".$search."%' AND price >= ".$price." AND business_type='".$business_type."' AND property_type='".$property_type."';")->num_rows / $quantity);
       }
 
     ?>
